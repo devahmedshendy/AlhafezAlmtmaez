@@ -14,6 +14,8 @@
 		64EFAE422AFEA88400C34799 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 64EFAE412AFEA88400C34799 /* Assets.xcassets */; };
 		64EFAE452AFEA88400C34799 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64EFAE432AFEA88400C34799 /* LaunchScreen.storyboard */; };
 		64EFAE4E2AFEAA9200C34799 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 64EFAE4D2AFEAA9200C34799 /* Localizable.xcstrings */; };
+		64EFAE592AFEAB2A00C34799 /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64EFAE572AFEAB2A00C34799 /* SplashScreen.swift */; };
+		64EFAE5A2AFEAB2A00C34799 /* SplashScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 64EFAE582AFEAB2A00C34799 /* SplashScreen.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		64EFAE442AFEA88400C34799 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		64EFAE462AFEA88400C34799 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		64EFAE4D2AFEAA9200C34799 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		64EFAE572AFEAB2A00C34799 /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
+		64EFAE582AFEAB2A00C34799 /* SplashScreen.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SplashScreen.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,13 +67,39 @@
 				64EFAE382AFEA88200C34799 /* AppDelegate.swift */,
 				64EFAE3A2AFEA88200C34799 /* SceneDelegate.swift */,
 				64EFAE3C2AFEA88200C34799 /* ViewController.swift */,
-				64EFAE4D2AFEAA9200C34799 /* Localizable.xcstrings */,
 				64EFAE3E2AFEA88200C34799 /* Main.storyboard */,
-				64EFAE412AFEA88400C34799 /* Assets.xcassets */,
 				64EFAE432AFEA88400C34799 /* LaunchScreen.storyboard */,
+				64EFAE542AFEAB0100C34799 /* Screens */,
+				64EFAE552AFEAB0B00C34799 /* Resources */,
+				64EFAE4D2AFEAA9200C34799 /* Localizable.xcstrings */,
 				64EFAE462AFEA88400C34799 /* Info.plist */,
 			);
 			path = AlhafezAlmtmaez;
+			sourceTree = "<group>";
+		};
+		64EFAE542AFEAB0100C34799 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				64EFAE562AFEAB1100C34799 /* Splash */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		64EFAE552AFEAB0B00C34799 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				64EFAE412AFEA88400C34799 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		64EFAE562AFEAB1100C34799 /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				64EFAE572AFEAB2A00C34799 /* SplashScreen.swift */,
+				64EFAE582AFEAB2A00C34799 /* SplashScreen.xib */,
+			);
+			path = Splash;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -132,6 +162,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				64EFAE452AFEA88400C34799 /* LaunchScreen.storyboard in Resources */,
+				64EFAE5A2AFEAB2A00C34799 /* SplashScreen.xib in Resources */,
 				64EFAE422AFEA88400C34799 /* Assets.xcassets in Resources */,
 				64EFAE4E2AFEAA9200C34799 /* Localizable.xcstrings in Resources */,
 				64EFAE402AFEA88200C34799 /* Main.storyboard in Resources */,
@@ -145,6 +176,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				64EFAE592AFEAB2A00C34799 /* SplashScreen.swift in Sources */,
 				64EFAE3D2AFEA88200C34799 /* ViewController.swift in Sources */,
 				64EFAE392AFEA88200C34799 /* AppDelegate.swift in Sources */,
 				64EFAE3B2AFEA88200C34799 /* SceneDelegate.swift in Sources */,
@@ -225,7 +257,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -282,7 +314,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
