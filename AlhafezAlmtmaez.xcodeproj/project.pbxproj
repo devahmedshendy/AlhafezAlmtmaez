@@ -13,6 +13,7 @@
 		64EFAE402AFEA88200C34799 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64EFAE3E2AFEA88200C34799 /* Main.storyboard */; };
 		64EFAE422AFEA88400C34799 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 64EFAE412AFEA88400C34799 /* Assets.xcassets */; };
 		64EFAE452AFEA88400C34799 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64EFAE432AFEA88400C34799 /* LaunchScreen.storyboard */; };
+		64EFAE4E2AFEAA9200C34799 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 64EFAE4D2AFEAA9200C34799 /* Localizable.xcstrings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		64EFAE412AFEA88400C34799 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		64EFAE442AFEA88400C34799 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		64EFAE462AFEA88400C34799 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		64EFAE4D2AFEAA9200C34799 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 				64EFAE382AFEA88200C34799 /* AppDelegate.swift */,
 				64EFAE3A2AFEA88200C34799 /* SceneDelegate.swift */,
 				64EFAE3C2AFEA88200C34799 /* ViewController.swift */,
+				64EFAE4D2AFEAA9200C34799 /* Localizable.xcstrings */,
 				64EFAE3E2AFEA88200C34799 /* Main.storyboard */,
 				64EFAE412AFEA88400C34799 /* Assets.xcassets */,
 				64EFAE432AFEA88400C34799 /* LaunchScreen.storyboard */,
@@ -111,6 +114,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ar,
 			);
 			mainGroup = 64EFAE2C2AFEA88200C34799;
 			productRefGroup = 64EFAE362AFEA88200C34799 /* Products */;
@@ -129,6 +133,7 @@
 			files = (
 				64EFAE452AFEA88400C34799 /* LaunchScreen.storyboard in Resources */,
 				64EFAE422AFEA88400C34799 /* Assets.xcassets in Resources */,
+				64EFAE4E2AFEAA9200C34799 /* Localizable.xcstrings in Resources */,
 				64EFAE402AFEA88200C34799 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
