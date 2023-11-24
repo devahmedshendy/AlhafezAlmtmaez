@@ -19,7 +19,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
       guard let windwoScene = scene as? UIWindowScene else { return }
 
       self.window = UIWindow(windowScene: windwoScene)
-      self.window?.rootViewController = SplashScreen()
+      self.window?.rootViewController = SignInScreen()
+//      self.window?.rootViewController = SplashScreen()
       self.window?.makeKeyAndVisible()
   }
 

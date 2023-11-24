@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AuthBackgroundView" customModule="AlhafezAlmtmaez" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RmK-bg-QYW" userLabel="SafeAreaBackground">
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="59"/>
+                    <color key="backgroundColor" name="AuthSafeAreaBackground"/>
+                </view>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="auth-banner-image" translatesAutoresizingMaskIntoConstraints="NO" id="Eab-eO-1L8">
+                    <rect key="frame" x="0.0" y="59" width="393" height="237"/>
+                </imageView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="RmK-bg-QYW" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="0do-uQ-mDB"/>
+                <constraint firstAttribute="trailing" secondItem="RmK-bg-QYW" secondAttribute="trailing" id="2TC-id-Evw"/>
+                <constraint firstItem="Eab-eO-1L8" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="3Ra-ay-CPo"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Eab-eO-1L8" secondAttribute="trailing" id="GZS-JM-wUm"/>
+                <constraint firstItem="RmK-bg-QYW" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="N4P-nA-drq"/>
+                <constraint firstItem="RmK-bg-QYW" firstAttribute="bottom" secondItem="Eab-eO-1L8" secondAttribute="top" id="aeb-nL-4fm"/>
+                <constraint firstItem="Eab-eO-1L8" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="knN-Fv-ffV"/>
+            </constraints>
+            <point key="canvasLocation" x="-22" y="-11"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="auth-banner-image" width="375" height="237"/>
+        <namedColor name="AuthSafeAreaBackground">
+            <color red="0.89411771297454834" green="0.95686274766921997" blue="0.95686274766921997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

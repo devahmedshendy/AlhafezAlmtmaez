@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SplashScreen: UIViewController {
+class SplashScreen: BaseScreen {
 
     // MARK: - LifeCycle
     
