@@ -11,6 +11,12 @@ import UIKit
 extension UIView: UIViewNibbable, StringIdentifiable, AnyObjectIdentifiable { }
 
 extension UIView {
+    var globalFrame: CGRect {
+        return convert(bounds, to: window)
+    }
+}
+
+extension UIView {
     func setupXib() {
         let contentView = loadNib()
 
@@ -31,12 +37,6 @@ extension UIView {
 
     func loadNib() -> UIView {
         Self.nib.instantiate(withOwner: self, options: nil).first as! UIView
-    }
-}
-
-extension UIView {
-    var isRTL: Bool {
-        UIApplication.shared.userInterfaceLayoutDirection == .rightToLeft
     }
 }
 

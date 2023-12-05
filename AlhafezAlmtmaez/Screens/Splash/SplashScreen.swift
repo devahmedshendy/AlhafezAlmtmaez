@@ -9,11 +9,19 @@ import UIKit
 
 class SplashScreen: BaseScreen {
 
+    // MARK: - Properties
+
+    private lazy var vm: SplashScreenVM = .init()
+
+    override var prefersStatusBarHidden: Bool {
+        return true
+    }
+
     // MARK: - LifeCycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        vm.onViewDidLoad()
     }
 }

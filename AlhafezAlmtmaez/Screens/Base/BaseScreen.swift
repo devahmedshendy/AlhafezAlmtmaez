@@ -7,7 +7,10 @@
 
 import UIKit
 
-class BaseScreen: UIViewController {
+class BaseScreen: BaseVC {
+    
+    // MARK: - LifeCycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
