@@ -191,7 +191,7 @@
 		64C1822E2B1F20EF00AE05A7 /* StorageKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageKey.swift; sourceTree = "<group>"; };
 		64C182312B1F217100AE05A7 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		64C182322B1F217100AE05A7 /* HomeScreen.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeScreen.xib; sourceTree = "<group>"; };
-		64EFAE352AFEA88200C34799 /* AlhafezAlmtmaez.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlhafezAlmtmaez.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		64EFAE352AFEA88200C34799 /* الحافظ المتميز.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "الحافظ المتميز.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		64EFAE382AFEA88200C34799 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		64EFAE3A2AFEA88200C34799 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		64EFAE3C2AFEA88200C34799 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -562,7 +562,7 @@
 		64EFAE362AFEA88200C34799 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				64EFAE352AFEA88200C34799 /* AlhafezAlmtmaez.app */,
+				64EFAE352AFEA88200C34799 /* الحافظ المتميز.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -638,7 +638,7 @@
 				642727AC2B1CAA0F00A69C7E /* Toast */,
 			);
 			productName = AlhafezAlmtmaez;
-			productReference = 64EFAE352AFEA88200C34799 /* AlhafezAlmtmaez.app */;
+			productReference = 64EFAE352AFEA88200C34799 /* الحافظ المتميز.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -941,7 +941,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AlhafezAlmtmaez/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "Alhafez Almtmaez";
+				INFOPLIST_KEY_CFBundleDisplayName = "الحافظ المتميز";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -952,7 +952,7 @@
 				);
 				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.alhafez-almtmaez.ios";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "الحافظ المتميز";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -968,7 +968,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AlhafezAlmtmaez/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "Alhafez Almtmaez";
+				INFOPLIST_KEY_CFBundleDisplayName = "الحافظ المتميز";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -979,7 +979,7 @@
 				);
 				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.alhafez-almtmaez.ios";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "الحافظ المتميز";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
