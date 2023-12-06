@@ -485,19 +485,11 @@
 			children = (
 				640E76B22B1847EA001CE975 /* Buttons */,
 				640E76A12B1842B4001CE975 /* TextFields */,
-				64751F2F2B02B6AC0013EB9E /* Backgrounds */,
 				640B333F2B192A8500BECE0E /* Labels */,
 				640B33402B192A9800BECE0E /* FormFieldView.swift */,
 				6427275F2B1A46AA00A69C7E /* PhoneNumberFieldView.swift */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		64751F2F2B02B6AC0013EB9E /* Backgrounds */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Backgrounds;
 			sourceTree = "<group>";
 		};
 		64751F362B02BA1D0013EB9E /* Extensions */ = {
