@@ -16,6 +16,13 @@ extension AttributedString {
             attributes: .init(.formSubmitTitle)
         )
     }
+
+    static func underlinedTitle(_ text: String) -> AttributedString {
+        .init(
+            text,
+            attributes: .init(.underlinedTitle)
+        )
+    }
 }
 
 // MARK: - Dictionary - [NSAttributedString.Key: Any]
@@ -34,6 +41,15 @@ extension Dictionary where Key == NSAttributedString.Key, Value == Any {
             font: .avenirArabic_800(size: 16),
             textColor: .white,
             textAlignment: .right
+        )
+    }
+
+    static var underlinedTitle: [NSAttributedString.Key : Any] {
+        NSAttributedString.attributes(
+            font: .avenirArabic_800(size: 14),
+            textColor: .formSubmitBackground,
+            textAlignment: .center,
+            underlineColor: .formSubmitBackground
         )
     }
 }

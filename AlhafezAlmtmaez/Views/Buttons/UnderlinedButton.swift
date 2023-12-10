@@ -1,17 +1,13 @@
 //
-//  FormSubmitButton.swift
+//  UnderlinedButton.swift
 //  AlhafezAlmtmaez
 //
-//  Created by Ahmed Shendy on 30/11/2023.
+//  Created by Ahmed Shendy on 06/12/2023.
 //
 
 import UIKit
 
-final class FormSubmitButton: UIButton {
-
-    // MARK: - Theme
-
-    var _cornerRadius: CGFloat { .formCornerRadius }
+final class UnderlinedButton: UIButton {
 
     // MARK: - Properties
 
@@ -49,36 +45,14 @@ final class FormSubmitButton: UIButton {
         configuration?.titleAlignment = .leading
         configuration?.contentInsets = .formButtonContentInsets
 
-        backgroundColor = .formSubmitBackground
+        backgroundColor = .clear
         configuration?.baseForegroundColor = .white
         configuration?.baseBackgroundColor = .clear
 
-        configuration?.image = .init(
-            systemName: "chevron.backward",
-            withConfiguration: UIImage.SymbolConfiguration(
-                pointSize: .dynamicToWidth(11),
-                weight: .heavy
-            )
-        )
         configuration?.imagePlacement = .trailing
 
-        if let imageView = imageView {
-            imageView.translatesAutoresizingMaskIntoConstraints = false
-            NSLayoutConstraint.activate([
-                imageView.centerYAnchor.constraint(
-                    equalTo: self.centerYAnchor
-                ),
-                imageView.leftAnchor.constraint(
-                    equalTo: self.leftAnchor,
-                    constant: .dynamicToWidth(16)
-                )
-            ])
-        }
-
-        contentHorizontalAlignment = .right
+        contentHorizontalAlignment = .center
         semanticContentAttribute = .forceRightToLeft
-
-        layer.cornerRadius = _cornerRadius
 
         setupAttributedTitle()
     }
@@ -86,7 +60,7 @@ final class FormSubmitButton: UIButton {
     // MARK: - View Setup
 
     private func setupAttributedTitle() {
-        configuration?.attributedTitle = .formSubmitTitle(
+        configuration?.attributedTitle = .underlinedTitle(
             title ?? configuration?.title ?? titleLabel?.text ?? ""
         )
     }

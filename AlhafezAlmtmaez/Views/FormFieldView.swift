@@ -2,12 +2,17 @@
 //  FormFieldView.swift
 //  AlhafezAlmtmaez
 //
-//  Created by Ahmed Shendy on 30/11/2023.
+//  Created by Ahmed Shendy on 08/12/2023.
 //
 
 import UIKit
 
-@objc class FormFieldView: UIView {
+protocol FormFieldEditable: UIView {
+    func doApplyErrorLayout()
+    func doClearErrorLayout()
+}
+
+class FormFieldView: UIView {
 
     // MARK: - Properties
 
@@ -20,25 +25,11 @@ import UIKit
         }
     }
 
-    var value: String {
-        textField.text ?? ""
-    }
-
-    var error: String {
-        get {
-            errorLabel.text ?? ""
-        }
-        set {
-            errorLabel.text = newValue
-            textField.hasError = newValue.isEmpty == false
-        }
-    }
-
     // MARK: - Subviews
 
-    private lazy var titleLabel: FormFieldTitleLabel = .init()
-    private lazy var textField: FormTextField = makeTextField()
-    private lazy var errorLabel: FormFieldErrorLabel = .init()
+    private(set) lazy var titleLabel: FormFieldTitleLabel = .init()
+    private(set) lazy var formField: FormFieldEditable = makeFormField()
+    private(set) lazy var errorLabel: FormFieldErrorLabel = .init()
 
     // MARK: - LifeCycle
 
@@ -60,52 +51,37 @@ import UIKit
 
     func setup() {
         addSubview(titleLabel)
-        addSubview(textField)
+        addSubview(formField)
         addSubview(errorLabel)
 
-        setupStrings()
-        setupDynamicLayout()
-
         setupTitleLabel()
-        setupTextField()
+        setupFormField()
         setupErrorLabel()
-
-        setupActions()
     }
 
-    func makeTextField() -> FormTextField {
-        return .init()
+    func makeFormField() -> FormFieldEditable {
+        return FormTextField()
     }
 
     // MARK: - Actions
 
-    private func setupActions() {
-        textField.onBecomeFirstResponder = { [weak self] in
-            _ = self?.titleLabel.becomeFirstResponder()
-            _ = self?.errorLabel.becomeFirstResponder()
+    func doSetError(_ text: String) {
+        guard text.isEmpty == false else {
+            return doClearError()
         }
+        errorLabel.text = text
+        formField.doApplyErrorLayout()
+    }
 
-        textField.onResignFirstResponder = { [weak self] in
-            guard let self = self, self.value.isEmpty
-            else { return }
-
-            _ = self.titleLabel.resignFirstResponder()
-            _ = self.errorLabel.resignFirstResponder()
-        }
+    func doClearError() {
+        errorLabel.text = ""
+        formField.doClearErrorLayout()
     }
 
     // MARK: - View Setup
 
-    private func setupStrings() {
-        
-    }
-
-    private func setupDynamicLayout() {
-
-    }
-
     private func setupTitleLabel() {
-        
+
         // Constraint Setup
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
 
@@ -122,23 +98,23 @@ import UIKit
         ])
     }
 
-    private func setupTextField() {
-        
+    private func setupFormField() {
+
         // Constraints Setup
-        textField.translatesAutoresizingMaskIntoConstraints = false
+        formField.translatesAutoresizingMaskIntoConstraints = false
 
         NSLayoutConstraint.activate([
-            textField.leftAnchor.constraint(
+            formField.leftAnchor.constraint(
                 equalTo: self.leftAnchor
             ),
-            textField.rightAnchor.constraint(
+            formField.rightAnchor.constraint(
                 equalTo: self.rightAnchor
             ),
-            textField.topAnchor.constraint(
+            formField.topAnchor.constraint(
                 equalTo: titleLabel.bottomAnchor,
                 constant: .dynamicToWidth(16)
             ),
-            textField.bottomAnchor.constraint(
+            formField.bottomAnchor.constraint(
                 equalTo: errorLabel.topAnchor
             )
         ])

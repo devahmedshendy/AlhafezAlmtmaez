@@ -42,6 +42,6 @@ extension SignInScreen {
     private func setupDynamicLayout() {
         fieldsStackTopConstraint.constant = .dynamicToWidth(48)
         fieldsStackBottomConstraint.constant = .dynamicToWidth(80)
-        scrollContentBottomConstraint.constant = .dynamicToWidth(34)
+        scrollContentBottomConstraint.constant = .dynamicToWidth(45)
     }
 }

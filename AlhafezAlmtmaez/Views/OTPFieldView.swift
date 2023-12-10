@@ -1,23 +1,23 @@
 //
-//  PhoneNumberFieldView.swift
+//  OTPFieldView.swift
 //  AlhafezAlmtmaez
 //
-//  Created by Ahmed Shendy on 01/12/2023.
+//  Created by Ahmed Shendy on 08/12/2023.
 //
 
 import Foundation
 
-final class PhoneNumberFieldView: FormTextFieldView {
+final class OTPFieldView: FormFieldView {
 
     // MARK: - LifeCycle
 
     override func setup() {
         super.setup()
 
-        title = .text.phoneNumber
+        title = ""
     }
 
     override func makeFormField() -> FormFieldEditable {
-        PhoneNumberField()
+        FormOTPStackView(noOfFields: 4)
     }
 }

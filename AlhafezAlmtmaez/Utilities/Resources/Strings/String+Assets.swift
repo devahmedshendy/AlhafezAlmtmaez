@@ -11,6 +11,11 @@ extension String {
     enum text {
         static var signin: String { "تسجيل الدخول" }
         static var phoneNumber: String { "رقم الهاتف" }
+        static var verifyCode: String { "رمز التحقق" }
+        static var verifyCodeHeader: String { "الرجاء إدخال رمز التحقق" }
+        static var verifyCodeSentTo: String { "تم إرسال رمز التحقق إلى رقم الهاتف" }
+        static var verify: String { "تحقق" }
+        static var changePhoneNumberQuestion: String { "هل تريد تغير رقم الهاتف؟" }
     }
 
     enum error {

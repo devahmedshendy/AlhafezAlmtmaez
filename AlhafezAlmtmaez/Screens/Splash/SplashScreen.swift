@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SplashScreen: BaseScreen {
+final class SplashScreen: BaseScreen {
 
     // MARK: - Properties
 

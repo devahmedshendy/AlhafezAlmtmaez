@@ -8,7 +8,13 @@
 import UIKit
 
 class BaseScreen: BaseVC {
-    
+
+    // MARK: - Properties
+
+    override var prefersStatusBarHidden: Bool {
+        return false
+    }
+
     // MARK: - LifeCycle
     
     override func viewDidLoad() {

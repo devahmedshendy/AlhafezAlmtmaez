@@ -11,7 +11,7 @@
 		640B33382B19275100BECE0E /* String+Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640B33372B19275100BECE0E /* String+Assets.swift */; };
 		640B333A2B19282200BECE0E /* BaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640B33392B19282200BECE0E /* BaseVC.swift */; };
 		640B333C2B19287F00BECE0E /* PhoneNumberField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640B333B2B19287F00BECE0E /* PhoneNumberField.swift */; };
-		640B33412B192A9800BECE0E /* FormFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640B33402B192A9800BECE0E /* FormFieldView.swift */; };
+		640B33412B192A9800BECE0E /* FormTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640B33402B192A9800BECE0E /* FormTextFieldView.swift */; };
 		640B33432B192B1200BECE0E /* FormFieldErrorLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640B33422B192B1200BECE0E /* FormFieldErrorLabel.swift */; };
 		640B33452B192BA800BECE0E /* NSAttributedString+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640B33442B192BA800BECE0E /* NSAttributedString+Extension.swift */; };
 		640B33472B192D4000BECE0E /* FormFieldBaseLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640B33462B192D4000BECE0E /* FormFieldBaseLabel.swift */; };
@@ -76,6 +76,14 @@
 		642727B82B1D5A3C00A69C7E /* UserDefaultsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642727B72B1D5A3C00A69C7E /* UserDefaultsService.swift */; };
 		642727BD2B1D5F3B00A69C7E /* NetworkEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642727BC2B1D5F3B00A69C7E /* NetworkEndpoint.swift */; };
 		642727BF2B1D5FA000A69C7E /* UserProfileEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642727BE2B1D5FA000A69C7E /* UserProfileEndpoint.swift */; };
+		642CBF002B20AF3A007B3FFA /* VerifyCodeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642CBEFE2B20AF3A007B3FFA /* VerifyCodeScreen.swift */; };
+		642CBF012B20AF3A007B3FFA /* VerifyCodeScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 642CBEFF2B20AF3A007B3FFA /* VerifyCodeScreen.xib */; };
+		642CBF032B20B4D0007B3FFA /* UnderlinedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642CBF022B20B4D0007B3FFA /* UnderlinedButton.swift */; };
+		642CBF052B20BA10007B3FFA /* FormOTPStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642CBF042B20BA10007B3FFA /* FormOTPStackView.swift */; };
+		642CBF072B20BA53007B3FFA /* FormOTPField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642CBF062B20BA53007B3FFA /* FormOTPField.swift */; };
+		642CBF0A2B231351007B3FFA /* OTPValidityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642CBF092B231351007B3FFA /* OTPValidityManager.swift */; };
+		642CBF0C2B234B6E007B3FFA /* OTPFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642CBF0B2B234B6E007B3FFA /* OTPFieldView.swift */; };
+		642CBF0E2B2382F1007B3FFA /* FormFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642CBF0D2B2382F1007B3FFA /* FormFieldView.swift */; };
 		645B959A2B115F1A00142284 /* UIViewNibbable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 645B95992B115F1A00142284 /* UIViewNibbable.swift */; };
 		645B959C2B115FBD00142284 /* AnyObjectIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 645B959B2B115FBD00142284 /* AnyObjectIdentifiable.swift */; };
 		64751F292B02B4C40013EB9E /* SignInScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64751F272B02B4C40013EB9E /* SignInScreen.swift */; };
@@ -110,7 +118,7 @@
 		640B33372B19275100BECE0E /* String+Assets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Assets.swift"; sourceTree = "<group>"; };
 		640B33392B19282200BECE0E /* BaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseVC.swift; sourceTree = "<group>"; };
 		640B333B2B19287F00BECE0E /* PhoneNumberField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneNumberField.swift; sourceTree = "<group>"; };
-		640B33402B192A9800BECE0E /* FormFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormFieldView.swift; sourceTree = "<group>"; };
+		640B33402B192A9800BECE0E /* FormTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormTextFieldView.swift; sourceTree = "<group>"; };
 		640B33422B192B1200BECE0E /* FormFieldErrorLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormFieldErrorLabel.swift; sourceTree = "<group>"; };
 		640B33442B192BA800BECE0E /* NSAttributedString+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+Extension.swift"; sourceTree = "<group>"; };
 		640B33462B192D4000BECE0E /* FormFieldBaseLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormFieldBaseLabel.swift; sourceTree = "<group>"; };
@@ -173,6 +181,14 @@
 		642727B72B1D5A3C00A69C7E /* UserDefaultsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsService.swift; sourceTree = "<group>"; };
 		642727BC2B1D5F3B00A69C7E /* NetworkEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkEndpoint.swift; sourceTree = "<group>"; };
 		642727BE2B1D5FA000A69C7E /* UserProfileEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileEndpoint.swift; sourceTree = "<group>"; };
+		642CBEFE2B20AF3A007B3FFA /* VerifyCodeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyCodeScreen.swift; sourceTree = "<group>"; };
+		642CBEFF2B20AF3A007B3FFA /* VerifyCodeScreen.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VerifyCodeScreen.xib; sourceTree = "<group>"; };
+		642CBF022B20B4D0007B3FFA /* UnderlinedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderlinedButton.swift; sourceTree = "<group>"; };
+		642CBF042B20BA10007B3FFA /* FormOTPStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormOTPStackView.swift; sourceTree = "<group>"; };
+		642CBF062B20BA53007B3FFA /* FormOTPField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormOTPField.swift; sourceTree = "<group>"; };
+		642CBF092B231351007B3FFA /* OTPValidityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPValidityManager.swift; sourceTree = "<group>"; };
+		642CBF0B2B234B6E007B3FFA /* OTPFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPFieldView.swift; sourceTree = "<group>"; };
+		642CBF0D2B2382F1007B3FFA /* FormFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormFieldView.swift; sourceTree = "<group>"; };
 		645B95992B115F1A00142284 /* UIViewNibbable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewNibbable.swift; sourceTree = "<group>"; };
 		645B959B2B115FBD00142284 /* AnyObjectIdentifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyObjectIdentifiable.swift; sourceTree = "<group>"; };
 		64751F272B02B4C40013EB9E /* SignInScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInScreen.swift; sourceTree = "<group>"; };
@@ -278,6 +294,8 @@
 			children = (
 				640E76A22B1842C1001CE975 /* FormTextField.swift */,
 				640B333B2B19287F00BECE0E /* PhoneNumberField.swift */,
+				642CBF062B20BA53007B3FFA /* FormOTPField.swift */,
+				642CBF042B20BA10007B3FFA /* FormOTPStackView.swift */,
 			);
 			path = TextFields;
 			sourceTree = "<group>";
@@ -307,6 +325,7 @@
 			isa = PBXGroup;
 			children = (
 				640E76B32B1847FD001CE975 /* FormSubmitButton.swift */,
+				642CBF022B20B4D0007B3FFA /* UnderlinedButton.swift */,
 			);
 			path = Buttons;
 			sourceTree = "<group>";
@@ -459,6 +478,23 @@
 			path = Endpoints;
 			sourceTree = "<group>";
 		};
+		642CBEFD2B20AF1D007B3FFA /* VerifyCode */ = {
+			isa = PBXGroup;
+			children = (
+				642CBEFF2B20AF3A007B3FFA /* VerifyCodeScreen.xib */,
+				642CBEFE2B20AF3A007B3FFA /* VerifyCodeScreen.swift */,
+			);
+			path = VerifyCode;
+			sourceTree = "<group>";
+		};
+		642CBF082B231344007B3FFA /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				642CBF092B231351007B3FFA /* OTPValidityManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
 		64751F262B02B4A50013EB9E /* SignIn */ = {
 			isa = PBXGroup;
 			children = (
@@ -486,8 +522,10 @@
 				640E76B22B1847EA001CE975 /* Buttons */,
 				640E76A12B1842B4001CE975 /* TextFields */,
 				640B333F2B192A8500BECE0E /* Labels */,
-				640B33402B192A9800BECE0E /* FormFieldView.swift */,
+				642CBF0D2B2382F1007B3FFA /* FormFieldView.swift */,
+				640B33402B192A9800BECE0E /* FormTextFieldView.swift */,
 				6427275F2B1A46AA00A69C7E /* PhoneNumberFieldView.swift */,
+				642CBF0B2B234B6E007B3FFA /* OTPFieldView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -512,6 +550,7 @@
 		64751F372B02BA2B0013EB9E /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				642CBF082B231344007B3FFA /* Managers */,
 				640B33522B193F9800BECE0E /* Errors */,
 				6427275C2B1A22B300A69C7E /* Observers */,
 				64751F382B02BA3A0013EB9E /* Protocols */,
@@ -582,6 +621,7 @@
 		64EFAE542AFEAB0100C34799 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				642CBEFD2B20AF1D007B3FFA /* VerifyCode */,
 				64751F2B2B02B4CA0013EB9E /* Base */,
 				64EFAE562AFEAB1100C34799 /* Splash */,
 				64751F262B02B4A50013EB9E /* SignIn */,
@@ -679,6 +719,7 @@
 				640E76BE2B184C4B001CE975 /* AvenirArabic-Heavy.otf in Resources */,
 				64EFAE452AFEA88400C34799 /* LaunchScreen.storyboard in Resources */,
 				64EFAE5A2AFEAB2A00C34799 /* SplashScreen.xib in Resources */,
+				642CBF012B20AF3A007B3FFA /* VerifyCodeScreen.xib in Resources */,
 				64C182342B1F217100AE05A7 /* HomeScreen.xib in Resources */,
 				640E76A92B18448E001CE975 /* AvenirArabic-Medium.otf in Resources */,
 				64EFAE422AFEA88400C34799 /* Assets.xcassets in Resources */,
@@ -696,6 +737,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				640B33472B192D4000BECE0E /* FormFieldBaseLabel.swift in Sources */,
+				642CBF0E2B2382F1007B3FFA /* FormFieldView.swift in Sources */,
 				640E76AD2B184505001CE975 /* UIViewController+Extension.swift in Sources */,
 				640B33382B19275100BECE0E /* String+Assets.swift in Sources */,
 				640E76BA2B184AE1001CE975 /* String+Extension.swift in Sources */,
@@ -734,6 +776,7 @@
 				64C182232B1F134A00AE05A7 /* KeychainError.swift in Sources */,
 				642727902B1CA37200A69C7E /* UserService.swift in Sources */,
 				6427279B2B1CA76400A69C7E /* NetworkServer.swift in Sources */,
+				642CBF0A2B231351007B3FFA /* OTPValidityManager.swift in Sources */,
 				64751F352B02BA1B0013EB9E /* UIView+Extension.swift in Sources */,
 				642727BD2B1D5F3B00A69C7E /* NetworkEndpoint.swift in Sources */,
 				642727942B1CA6A500A69C7E /* UserRemoteDataRepository.swift in Sources */,
@@ -748,6 +791,7 @@
 				640B33432B192B1200BECE0E /* FormFieldErrorLabel.swift in Sources */,
 				640B33582B19422900BECE0E /* ScreenNavigationController.swift in Sources */,
 				640E76B42B1847FD001CE975 /* FormSubmitButton.swift in Sources */,
+				642CBF052B20BA10007B3FFA /* FormOTPStackView.swift in Sources */,
 				642727712B1C952300A69C7E /* BaseScreenService.swift in Sources */,
 				642727602B1A46AA00A69C7E /* PhoneNumberFieldView.swift in Sources */,
 				642727A52B1CA97F00A69C7E /* NetworkFields.swift in Sources */,
@@ -759,24 +803,28 @@
 				642727B02B1CAB8500A69C7E /* ServerError.swift in Sources */,
 				640B333A2B19282200BECE0E /* BaseVC.swift in Sources */,
 				64C1822B2B1F201800AE05A7 /* HttpBodies.swift in Sources */,
+				642CBF072B20BA53007B3FFA /* FormOTPField.swift in Sources */,
 				642727B82B1D5A3C00A69C7E /* UserDefaultsService.swift in Sources */,
 				64C182272B1F1FE300AE05A7 /* StatusCodes.swift in Sources */,
 				642727732B1C953500A69C7E /* BaseNetworkService.swift in Sources */,
 				64EFAE392AFEA88200C34799 /* AppDelegate.swift in Sources */,
+				642CBF0C2B234B6E007B3FFA /* OTPFieldView.swift in Sources */,
 				640B334D2B193F0900BECE0E /* BaseService.swift in Sources */,
 				642727992B1CA73800A69C7E /* AlhafezAlmtmaezServerProxy.swift in Sources */,
 				6427276E2B1C94EE00A69C7E /* SplashScreenService.swift in Sources */,
 				640E76AB2B1844F4001CE975 /* UIApplication+Extension.swift in Sources */,
 				640B335B2B1944C600BECE0E /* StringAttributes+Assets.swift in Sources */,
-				640B33412B192A9800BECE0E /* FormFieldView.swift in Sources */,
+				640B33412B192A9800BECE0E /* FormTextFieldView.swift in Sources */,
 				64C1822F2B1F20EF00AE05A7 /* StorageKey.swift in Sources */,
 				6427277B2B1C9C1100A69C7E /* AuthAccessibleService.swift in Sources */,
 				6427277D2B1C9CC600A69C7E /* UserSessionService.swift in Sources */,
 				6427276C2B1C94C400A69C7E /* PublishedOnMain.swift in Sources */,
 				64EFAE3B2AFEA88200C34799 /* SceneDelegate.swift in Sources */,
+				642CBF002B20AF3A007B3FFA /* VerifyCodeScreen.swift in Sources */,
 				640B33352B19210000BECE0E /* FormFieldTitleLabel.swift in Sources */,
 				642727922B1CA69C00A69C7E /* UserLocalDataRepository.swift in Sources */,
 				642727552B1A045500A69C7E /* CGFloat+Assets.swift in Sources */,
+				642CBF032B20B4D0007B3FFA /* UnderlinedButton.swift in Sources */,
 				642727A72B1CA9B900A69C7E /* AlhafezAlmtmaezServer.swift in Sources */,
 				64C1821D2B1F114200AE05A7 /* NetworkResponse.swift in Sources */,
 				64C182292B1F1FFF00AE05A7 /* HttpHeaders.swift in Sources */,
@@ -931,12 +979,14 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WC36D4V4KU;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AlhafezAlmtmaez/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "الحافظ المتميز";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIStatusBarHidden = NO;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -959,12 +1009,14 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WC36D4V4KU;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AlhafezAlmtmaez/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "الحافظ المتميز";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIStatusBarHidden = NO;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

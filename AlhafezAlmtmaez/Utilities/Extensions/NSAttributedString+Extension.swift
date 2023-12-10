@@ -12,8 +12,15 @@ extension NSAttributedString {
         font: UIFont,
         textColor: UIColor,
         textAlignment: NSTextAlignment,
-        lineHeight: CGFloat? = nil
+        lineHeight: CGFloat? = nil,
+        underlineColor: UIColor = .clear,
+        underlineStyle: NSUnderlineStyle = .single
     ) -> [NSAttributedString.Key : Any] {
+        var attributes: [NSAttributedString.Key : Any] = [:]
+
+        attributes[.font] = font
+        attributes[.foregroundColor] = textColor
+
         let paragraphStyle = NSMutableParagraphStyle()
         paragraphStyle.alignment = textAlignment
 
@@ -22,11 +29,14 @@ extension NSAttributedString {
             paragraphStyle.maximumLineHeight = lineHeight
         }
 
-        return [
-            .font : font,
-            .foregroundColor: textColor,
-            .paragraphStyle: paragraphStyle
-        ]
+        attributes[.paragraphStyle] = paragraphStyle
+
+        if underlineColor != .clear {
+            attributes[.underlineColor] = underlineColor
+            attributes[.underlineStyle] = underlineStyle
+        }
+
+        return attributes
     }
 
     static func formLabelAttributedString(

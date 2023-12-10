@@ -26,8 +26,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windwoScene = scene as? UIWindowScene else { return }
 
         self.window = UIWindow(windowScene: windwoScene)
-        self.setRootViewController(to: SplashScreen())
-        self.window?.makeKeyAndVisible()
+        self.setRootViewController(to: VerifyCodeScreen())
 
         subscription = sessionService
             .$state
