@@ -54,6 +54,7 @@ final class FormOTPField: FormTextField {
         autocapitalizationType = .none
         autocorrectionType = .no
         textAlignment = .center
+        textContentType = .oneTimeCode
 
         delegate = self
 

@@ -15,5 +15,6 @@ final class PhoneNumberField: FormTextField {
         super.setup()
 
         keyboardType = .phonePad
+        textContentType = .telephoneNumber
     }
 }
