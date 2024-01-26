@@ -7,24 +7,31 @@
 
 import Foundation
 
-enum GeneralError: AppError {
-    case Unknown(_ metadata: ErrorMetadata)
+//extension ApplicationError {
+//    enum General: StringIdentifiable {
+//        static func makeUnknown(_ debugMessage: String) ->  ApplicationError {
+//            .init(
+//                type: "\(Self.identifier) - Unknown",
+//                message: .error.Unknown,
+//                debugMessage: debugMessage
+//            )
+//        }
+//    }
+//}
 
-    var metadata: ErrorMetadata {
+enum GeneralError: ApplicationError {
+    case Unknown(_ debugMessage: String)
+
+    var details: ErrorDetails {
         switch self {
-        case .Unknown(let m): return m
-        }
-    }
-}
-
-extension GeneralError {
-    static func makeUnknown(_ debugMessage: String) ->  Self {
-        .Unknown(
-            .init(
+        case .Unknown(let debugMessage):
+            return .init(
                 type: "\(Self.identifier) - Unknown",
-                message: .error.unknown,
+                message: .error.Unknown,
                 debugMessage: debugMessage
             )
-        )
+        }
     }
+
+
 }

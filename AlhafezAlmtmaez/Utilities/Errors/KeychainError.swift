@@ -7,48 +7,61 @@
 
 import Foundation
 
-enum KeychainError: AppError {
-    case DuplicateItem(_ metadata: ErrorMetadata)
-    case InvalidData(_ metadata: ErrorMetadata)
-    case Unhandled(_ metadata: ErrorMetadata)
+//extension ApplicationError {
+//    enum Keychain: StringIdentifiable {
+//        static func makeDuplicateItem(forKey key: String) -> ApplicationError {
+//            .init(
+//                type: "\(Self.identifier) - DuplicateItem",
+//                message: .error.AppSettings,
+//                debugMessage: "Provided key: '\(key)' is already existed!"
+//            )
+//        }
+//
+//        static func makeInvalidData() -> ApplicationError {
+//            .init(
+//                type: "\(Self.identifier) - InvalidData",
+//                message: .error.AppSettings,
+//                debugMessage: "The type of data found is invalid"
+//            )
+//        }
+//
+//        static func makeUnhandled(osstatus: OSStatus) -> ApplicationError {
+//            .init(
+//                type: "\(Self.identifier) - Unhandled",
+//                message: .error.AppSettings,
+//                debugMessage: "Failed with osstatus: \(osstatus)!"
+//            )
+//        }
+//    }
+//}
 
-    var metadata: ErrorMetadata {
+enum KeychainError: ApplicationError {
+    case DuplicateItem(_ key: String)
+    case InvalidData
+    case Unhandled(_ osstatus: OSStatus)
+
+    var details: ErrorDetails {
         switch self {
-        case .DuplicateItem(let m): return m
-        case .InvalidData(let m): return m
-        case .Unhandled(let m): return m
-        }
-    }
-}
-
-extension KeychainError {
-    static func makeDuplicateItem(forKey key: String) -> Self {
-        .DuplicateItem(
-            .init(
+        case .DuplicateItem(let key):
+            return .init(
                 type: "\(Self.identifier) - DuplicateItem",
-                message: .error.appSettings,
+                message: .error.AppSettings,
                 debugMessage: "Provided key: '\(key)' is already existed!"
             )
-        )
-    }
 
-    static func invalidData() -> Self {
-        .InvalidData(
-            .init(
+        case .InvalidData:
+            return .init(
                 type: "\(Self.identifier) - InvalidData",
-                message: .error.appSettings,
+                message: .error.AppSettings,
                 debugMessage: "The type of data found is invalid"
             )
-        )
-    }
 
-    static func unknown(osstatus: OSStatus) -> Self {
-        .Unhandled(
-            .init(
+        case .Unhandled(let osstatus):
+            return .init(
                 type: "\(Self.identifier) - Unhandled",
-                message: .error.appSettings,
+                message: .error.AppSettings,
                 debugMessage: "Failed with osstatus: \(osstatus)!"
             )
-        )
+        }
     }
 }

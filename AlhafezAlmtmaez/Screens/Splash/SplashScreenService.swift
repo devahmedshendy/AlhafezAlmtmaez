@@ -12,7 +12,7 @@ final class SplashScreenService: BaseScreenService {
     // MARK: - Logic
 
     func handleOnStartup(
-        onFailure: @escaping (_ error: any AppError) -> Void
+        onFailure: @escaping (_ error: ApplicationError) -> Void
     ) {
         subscriptions[#function]?.cancel()
 

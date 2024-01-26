@@ -14,7 +14,7 @@ protocol NetworkServiceFeatures: BaseService {
 extension NetworkServiceFeatures {
     func unwrap<T>(responseData: T?) throws -> T {
         guard let data = responseData else {
-            throw ServerError.makeMissingResponseData()
+            throw ServerError.MissingResponseData
         }
 
         return data

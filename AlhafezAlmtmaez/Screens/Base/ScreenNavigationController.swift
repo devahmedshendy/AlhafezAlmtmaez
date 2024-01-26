@@ -12,7 +12,7 @@ final class ScreenNavigationController: UINavigationController, UINavigationCont
     // MARK: - Properties
 
     override var preferredStatusBarStyle: UIStatusBarStyle {
-        return viewControllers.last?.preferredStatusBarStyle ?? .lightContent
+        return viewControllers.last?.preferredStatusBarStyle ?? .darkContent
     }
 
     override func viewDidLoad() {

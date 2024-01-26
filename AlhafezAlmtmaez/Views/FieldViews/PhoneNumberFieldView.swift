@@ -8,13 +8,10 @@
 import Foundation
 
 final class PhoneNumberFieldView: FormTextFieldView {
-
-    // MARK: - LifeCycle
-
     override func setup() {
         super.setup()
 
-        title = .text.phoneNumber
+        title = .text.PhoneNumber
     }
 
     override func makeFormField() -> FormFieldEditable {

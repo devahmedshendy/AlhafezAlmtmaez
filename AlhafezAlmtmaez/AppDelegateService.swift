@@ -20,6 +20,7 @@ final class AppDelegateService: BaseService {
         setupNotification(application: application)
 
         setupScreenNavigationBarAppearance()
+        setupRTLAppearance()
     }
 
     // MARK: - Setup
@@ -50,6 +51,11 @@ final class AppDelegateService: BaseService {
         application.registerForRemoteNotifications()
     }
 
+    private func setupRTLAppearance() {
+        UIView.appearance().semanticContentAttribute = .forceRightToLeft
+        UINavigationBar.appearance().semanticContentAttribute = .forceRightToLeft
+    }
+
     private func setupScreenNavigationBarAppearance() {
         let appearance = UINavigationBarAppearance()
         appearance.configureWithDefaultBackground()
@@ -61,9 +67,8 @@ final class AppDelegateService: BaseService {
         appearance.titleTextAttributes = .navigationTitle
         appearance.largeTitleTextAttributes = .navigationTitle
 
-        let backImage = UIImage(
-            systemName: "chevron.backward.circle"
-        )?.withTintColor(.navigationTitle)
+        let backImage = UIImage(named: "navigate-back-icon")?
+            .withTintColor(.navigationTitle)
 
         appearance.setBackIndicatorImage(backImage, transitionMaskImage: backImage)
 

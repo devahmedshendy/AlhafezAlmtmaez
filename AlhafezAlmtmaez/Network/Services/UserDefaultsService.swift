@@ -59,8 +59,8 @@ extension UserDefaults {
         } catch let error as NSError {
             print(error.debugDescription)
 
-            throw Err.makeEncodingError(
-                debugMessage: error.localizedDescription
+            throw Err.EncodingError(
+                error.localizedDescription
             )
         }
     }

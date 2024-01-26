@@ -63,7 +63,7 @@ class FormFieldBaseLabel: UILabel {
     func setup() {
         font = _normalFont
         textColor = _textColor
-        semanticContentAttribute = .forceRightToLeft
+//        semanticContentAttribute = .forceRightToLeft
         textAlignment = .right
 
         setupAttributedText()

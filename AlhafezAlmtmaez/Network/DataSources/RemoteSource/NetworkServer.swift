@@ -8,19 +8,7 @@
 import Foundation
 
 protocol NetworkServer {
-    func request<
-        Configuration: NetworkRequestConfiguration,
-        Response: NetworkResponse
-    >(
-        requestConfig: Configuration.Type,
-        responseModel: Response.Type
-    ) async throws -> Response
-
-    func upload<
-        Configuration: NetworkRequestConfiguration,
-        Response: NetworkResponse
-    >(
-        requestConfig: Configuration.Type,
-        responseModel: Response.Type
-    ) async throws -> Response
+    func request<T: NetworkEndpoint>(
+        _ endpoint: T
+    ) async throws -> T.Response where T.Response: NetworkResponse
 }

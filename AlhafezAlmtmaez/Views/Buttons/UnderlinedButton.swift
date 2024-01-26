@@ -52,7 +52,7 @@ final class UnderlinedButton: UIButton {
         configuration?.imagePlacement = .trailing
 
         contentHorizontalAlignment = .center
-        semanticContentAttribute = .forceRightToLeft
+//        semanticContentAttribute = .forceRightToLeft
 
         setupAttributedTitle()
     }

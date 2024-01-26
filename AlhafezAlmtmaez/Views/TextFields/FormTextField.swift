@@ -63,8 +63,8 @@ class FormTextField: UITextField, FormFieldEditable {
 
     // MARK: - Properties
 
-    var onBecomeFirstResponder: (() -> Void)?
-    var onResignFirstResponder: (() -> Void)?
+    var onDidBecomeFirstResponder: (() -> Void)?
+    var onDidResignFirstResponder: (() -> Void)?
 
     var leftImage: UIImage? { nil }
     var rightImage: UIImage? { nil }
@@ -80,14 +80,6 @@ class FormTextField: UITextField, FormFieldEditable {
                 attributes: [
                     NSAttributedString.Key.foregroundColor : _placeholderColor]
             )
-        }
-    }
-
-    override var text: String? {
-        didSet {
-            guard let text = text else { return }
-
-            self.doUpdatedText(text)
         }
     }
 
@@ -134,7 +126,7 @@ class FormTextField: UITextField, FormFieldEditable {
 
         borderStyle = .none
         autocapitalizationType = .none
-        semanticContentAttribute = .forceRightToLeft
+//        semanticContentAttribute = .forceRightToLeft
         textAlignment = .right
 
         layer.borderColor = _borderNormalColor.cgColor
@@ -163,23 +155,40 @@ class FormTextField: UITextField, FormFieldEditable {
         text = String(describing: clippedText)
     }
 
-    func doFinishBecomeFirstResponder() {
-        onBecomeFirstResponder?()
+    func onDeferBecomeFirstResponder() {
+        guard Thread.isMainThread else {
+            return DispatchQueue.main.async {
+                self.onDeferBecomeFirstResponder()
+            }
+        }
+
+        doApplyFocusedLayout()
+
+        onDidBecomeFirstResponder?()
     }
 
-    func onFinishResignFirstResponder() {
-        onResignFirstResponder?()
+    func onDeferResignFirstResponder() {
+        guard Thread.isMainThread else {
+            return DispatchQueue.main.async {
+                self.onDeferResignFirstResponder()
+            }
+        }
+
+        doApplyNormalLayout()
+
+        onDidResignFirstResponder?()
     }
 
-    private func doUpdatedText(_ text: String) {
-        self.doUpdateLeftRightImageViewsTintColor(
-            text.isEmpty ? self._unfocusedIconColor : self._focusedIconColor
-        )
+    func doApplyNormalLayout() {
+        self.font = self._normalFont
+        self.backgroundColor = self._backgroundNormalColor
+        self.layer.borderColor = self._borderNormalColor.cgColor
     }
 
-    private func doUpdateLeftRightImageViewsTintColor(_ color: UIColor) {
-        self.leftImageView?.tintColor = color
-        self.rightImageView?.tintColor = color
+    func doApplyFocusedLayout() {
+        self.font = self._focusedFont
+        self.backgroundColor = self._backgroundFocusedColor
+        self.layer.borderColor = self._borderFocusedColor.cgColor
     }
 
     func doApplyErrorLayout() {
@@ -196,12 +205,7 @@ class FormTextField: UITextField, FormFieldEditable {
 
     override func becomeFirstResponder() -> Bool {
         defer {
-            DispatchQueue.main.async {
-                self.font = self._focusedFont
-                self.backgroundColor = self._backgroundFocusedColor
-                self.layer.borderColor = self._borderFocusedColor.cgColor
-                self.doFinishBecomeFirstResponder()
-            }
+            self.onDeferBecomeFirstResponder()
         }
 
         return super.becomeFirstResponder()
@@ -209,12 +213,7 @@ class FormTextField: UITextField, FormFieldEditable {
 
     override func resignFirstResponder() -> Bool {
         defer {
-            DispatchQueue.main.async {
-                self.font = self._normalFont
-                self.backgroundColor = self._backgroundNormalColor
-                self.layer.borderColor = self._borderNormalColor.cgColor
-                self.onFinishResignFirstResponder()
-            }
+            self.onDeferResignFirstResponder()
         }
 
         return super.resignFirstResponder()
@@ -233,76 +232,4 @@ class FormTextField: UITextField, FormFieldEditable {
     override func placeholderRect(forBounds bounds: CGRect) -> CGRect {
         bounds.inset(by: _contentInsets)
     }
-}
-
-// MARK: - View Setup
-
-extension FormTextField {
-    // TODO: Maybe I need it later.
-//    private func setupLeftView() {
-//        if let leftImage = leftImage {
-//            leftView = createOverlayImageView(leftImage)
-//            leftViewMode = .always
-//        }
-//    }
-//
-//    private func setupRightView() {
-//        if let rightImage = rightImage {
-//            rightView = createOverlayImageView(
-//                rightImage.withConfiguration(
-//                    UIImage.SymbolConfiguration(
-//                        pointSize: .dynamicToWidth(21),
-//                        weight: .bold
-//                    )
-//                )
-//            )
-//            rightViewMode = .always
-//        }
-//    }
-//
-//    private func createOverlayImageView(_ image: UIImage) -> UIView {
-//        let imageView = UIImageView()
-//        imageView.contentMode = .center
-//        imageView.tintColor = _unfocusedIconColor
-//        imageView.image = image
-//            .resizedDynamically()?
-//            .withRenderingMode(.alwaysTemplate)
-//            .withTintColor(_unfocusedIconColor)
-//
-//        return createOverlayContainerView(imageView)
-//    }
-//
-//    func createOverlayButton(_ button: UIButton) -> UIView {
-//        return createOverlayContainerView(
-//            button,
-//            overlayLength: .dynamicToWidth(50)
-//        )
-//    }
-//
-//    private func createOverlayContainerView(
-//        _ overlayView: UIView,
-//        containerLength: CGFloat = .dynamicToWidth(50),
-//        overlayLength: CGFloat = .dynamicToWidth(25)
-//    ) -> UIView {
-//
-//        let view = UIView(
-//            frame: .init(
-//                x: 0, y: 0,
-//                width: containerLength,
-//                height: containerLength
-//            )
-//        )
-//
-//        overlayView.frame = .init(
-//            x: 0, y: 0,
-//            width: overlayLength,
-//            height: overlayLength
-//        )
-//
-//        view.addSubview(overlayView)
-//
-//        overlayView.center = view.center
-//
-//        return view
-//    }
 }

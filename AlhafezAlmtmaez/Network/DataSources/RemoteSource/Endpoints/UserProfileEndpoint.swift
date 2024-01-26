@@ -7,25 +7,14 @@
 
 import Foundation
 
-struct UserProfileEndpoint: NetworkEndpoint {
-    typealias RequestConfiguration = Config
-    typealias DataResponse = Response
+struct UserProfileEndpoint: GetNetworkEndpoint {
+    typealias Response = NetworkResponseModel<UserProfileModel>
 
-    enum Config: GetRequestConfiguration {
-        static let url: String = .userProfile
-        static var httpHeaders: [String : String] = .default
-        static var httpParams: [String : String] = [:]
-    }
-
-    struct Response: NetworkResponse {
-        typealias DataModel = UserProfileModel
-
-        var status: Bool
-        var message: NetworkResponseMessage
-        var data: DataModel?
-    }
+    var config: Configuration = .init(
+        url: .userProfile
+    )
 
     init(token: String) {
-        Config.httpHeaders[.httpHeader.authorization] = token
+        config.httpHeaders[.httpHeader.authorization] = token
     }
 }

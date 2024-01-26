@@ -17,36 +17,16 @@ final class AlhafezAlmtmaezServerProxy: NetworkServer {
 
     private lazy var session: UserSession = .shared
 
-    // MARK: - Server Implementations
+    // MARK: - NetworkServer
 
-    func request<
-        Configuration: NetworkRequestConfiguration,
-        Response: NetworkResponse
-    >(
-        requestConfig: Configuration.Type,
-        responseModel: Response.Type
-    ) async throws -> Response {
-        try await run {
-            try await server.request(
-                requestConfig: requestConfig,
-                responseModel: responseModel
-            )
-        } as! Response
-    }
+    // NetworkResponse
 
-    func upload<
-        Configuration: NetworkRequestConfiguration,
-        Response: NetworkResponse
-    >(
-        requestConfig: Configuration.Type,
-        responseModel: Response.Type
-    ) async throws -> Response {
+    func request<T: NetworkEndpoint>(
+        _ endpoint: T
+    ) async throws -> T.Response where T.Response: NetworkResponse {
         try await run {
-            try await server.upload(
-                requestConfig: requestConfig,
-                responseModel: responseModel
-            )
-        } as! Response
+            try await server.request(endpoint)
+        } as! T.Response
     }
 
     // MARK: - Helpers
@@ -57,10 +37,11 @@ final class AlhafezAlmtmaezServerProxy: NetworkServer {
         do {
             return try await block()
 
-        } catch Err.UnauthorizedAccount(let payload) {
+        } catch Err.UnauthorizedAccount(let message, let validation) {
             session.toInactiveState()
-            throw Err.makeUnauthorizedAccount(
-              message: payload.message
+            throw Err.UnauthorizedAccount(
+                message,
+                validation
             )
 
         } catch {

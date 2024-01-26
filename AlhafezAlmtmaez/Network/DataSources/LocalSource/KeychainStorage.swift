@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class KeychainStorage: KeychainDataSource {
+final class KeychainStorage: KeychainStorageP {
 
     typealias Err = KeychainError
 
@@ -70,7 +70,7 @@ final class KeychainStorage: KeychainDataSource {
         guard status == Status.Success else {
             if status == Status.ItemNotFound { return nil }
 
-            throw Err.unknown(osstatus: status)
+            throw Err.Unhandled(status)
         }
 
         guard let result = result as? Data else { return nil }
@@ -103,7 +103,7 @@ final class KeychainStorage: KeychainDataSource {
             SecItemUpdate(query as CFDictionary, dataDict as CFDictionary)
 
         } else if status != Status.Success {
-            throw Err.unknown(osstatus: status)
+            throw Err.Unhandled(status)
         }
     }
 
@@ -122,7 +122,7 @@ final class KeychainStorage: KeychainDataSource {
         if status == errSecItemNotFound {
             // do nothing
         } else if status != errSecSuccess {
-            throw Err.unknown(osstatus: status)
+            throw Err.Unhandled(status)
         }
     }
 

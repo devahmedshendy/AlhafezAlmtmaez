@@ -11,6 +11,9 @@ final class VerifyCodeScreen: BaseScrollableFormScreen {
 
     // MARK: - Properties
 
+    var phoneNumber: String!
+    var verifyToken: String!
+
     private lazy var otpValidityManager: OTPValidityManager = .init()
 
     // MARK: - Constraints
@@ -102,12 +105,12 @@ extension VerifyCodeScreen: OTPValidityManagerDelegate {
 
 extension VerifyCodeScreen {
     private func setupStrings() {
-        self.navigationItem.title = .text.verifyCode
+        self.navigationItem.title = .text.VerifyCode
 
-        headerLabel.text = .text.verifyCodeHeader
-        sentToLabel.text = .text.verifyCodeSentTo
-        verifyButton.title = .text.verify
-        changePhoneNumberQuestionButton.title = .text.changePhoneNumberQuestion
+        headerLabel.text = .text.VerifyCodeHeader
+        sentToLabel.text = .text.VerifyCodeSentTo
+        verifyButton.title = .text.Verify
+        changePhoneNumberQuestionButton.title = .text.ChangePhoneNumberQuestion
     }
 
     private func setupDynamicLayout() {

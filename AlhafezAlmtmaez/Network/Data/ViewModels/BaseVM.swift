@@ -40,7 +40,7 @@ class BaseVM {
         self.onResponseMessage(message)
     }
 
-    func onLoadingFailure(_ error: any AppError) {
+    func onLoadingFailure(_ error: ApplicationError) {
         self.onStopLoading()
         self.onResponseMessage(error.message)
     }
@@ -55,7 +55,7 @@ class BaseVM {
         isLoadingMore = false
     }
 
-    func onLoadingMoreFailure(_ error: any AppError) {
+    func onLoadingMoreFailure(_ error: ApplicationError) {
         self.onStopLoadingMore()
         self.onToastMessage = error.message
     }
@@ -70,7 +70,7 @@ class BaseVM {
         self.isRefreshing = false
     }
 
-    func onRefreshingFailure(_ error: any AppError) {
+    func onRefreshingFailure(_ error: ApplicationError) {
         self.onStopRefreshing()
         self.onResponseMessage(error.message)
     }

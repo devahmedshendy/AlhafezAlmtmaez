@@ -49,7 +49,7 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o8i-k5-QTz" userLabel="ContentView">
                             <rect key="frame" x="0.0" y="0.0" width="393" height="793"/>
                             <subviews>
-                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="verifycode-banner-image" translatesAutoresizingMaskIntoConstraints="NO" id="G2z-lI-cHz">
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="verifycode-banner-image" translatesAutoresizingMaskIntoConstraints="NO" id="G2z-lI-cHz">
                                     <rect key="frame" x="0.0" y="0.0" width="393" height="301.33333333333331"/>
                                 </imageView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="الرجاء إدخال رمز التحقق" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6iH-Cj-NrS">
@@ -95,24 +95,18 @@
                                         </view>
                                     </subviews>
                                 </stackView>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="رسالة خطأ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fTx-FM-vA4" customClass="FormFieldErrorLabel" customModule="AlhafezAlmtmaez" customModuleProvider="target">
-                                    <rect key="frame" x="257.66666666666669" y="571.66666666666663" width="68.666666666666686" height="20.333333333333371"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                    <nil key="textColor"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
                                 <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="UYQ-o4-xcA">
                                     <rect key="frame" x="124.33333333333333" y="590" width="144.66666666666669" height="19"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="--:--" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8HJ-NX-1da">
-                                            <rect key="frame" x="0.0" y="0.0" width="19" height="19"/>
-                                            <fontDescription key="fontDescription" name="AvenirArabic-Heavy" family="Avenir Arabic" pointSize="12"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="لم يتم إرسال رمز التحقق؟" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LqB-nd-AyC">
+                                            <rect key="frame" x="0.0" y="0.33333333333337123" width="121.66666666666667" height="18.666666666666668"/>
+                                            <fontDescription key="fontDescription" name="AvenirArabic-Medium" family="Avenir Arabic" pointSize="12"/>
                                             <color key="textColor" name="NavigationTitle"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="لم يتم إرسال رمز التحقق؟" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LqB-nd-AyC">
-                                            <rect key="frame" x="23.000000000000007" y="0.33333333333337123" width="121.66666666666669" height="18.666666666666668"/>
-                                            <fontDescription key="fontDescription" name="AvenirArabic-Medium" family="Avenir Arabic" pointSize="12"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="--:--" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8HJ-NX-1da">
+                                            <rect key="frame" x="125.66666666666669" y="0.0" width="19" height="19"/>
+                                            <fontDescription key="fontDescription" name="AvenirArabic-Heavy" family="Avenir Arabic" pointSize="12"/>
                                             <color key="textColor" name="NavigationTitle"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -145,7 +139,6 @@
                                 <constraint firstItem="G2z-lI-cHz" firstAttribute="leading" secondItem="o8i-k5-QTz" secondAttribute="leading" id="FYe-mf-1oK"/>
                                 <constraint firstItem="Jie-Dw-cA7" firstAttribute="centerX" secondItem="zqh-Xg-msA" secondAttribute="centerX" id="FxD-TZ-OVY"/>
                                 <constraint firstAttribute="trailing" secondItem="G2z-lI-cHz" secondAttribute="trailing" id="Kfv-e6-upY"/>
-                                <constraint firstItem="fTx-FM-vA4" firstAttribute="top" secondItem="jpV-Cl-dHX" secondAttribute="bottom" constant="29.666666666666686" id="N5m-qV-WtC"/>
                                 <constraint firstItem="UYQ-o4-xcA" firstAttribute="centerX" secondItem="jpV-Cl-dHX" secondAttribute="centerX" id="QqX-Lf-7VV"/>
                                 <constraint firstItem="6iH-Cj-NrS" firstAttribute="centerX" secondItem="G2z-lI-cHz" secondAttribute="centerX" id="Rw0-Vz-PdJ"/>
                                 <constraint firstItem="jpV-Cl-dHX" firstAttribute="top" secondItem="Jie-Dw-cA7" secondAttribute="bottom" constant="48" id="S9J-ef-FBG"/>
@@ -157,7 +150,6 @@
                                 <constraint firstItem="x38-cx-vlD" firstAttribute="centerY" secondItem="UYQ-o4-xcA" secondAttribute="centerY" id="e53-Gq-Htp"/>
                                 <constraint firstAttribute="bottom" secondItem="vFv-pV-7j6" secondAttribute="bottom" constant="24" id="ia8-qm-BWw"/>
                                 <constraint firstItem="vFv-pV-7j6" firstAttribute="centerX" secondItem="o8i-k5-QTz" secondAttribute="centerX" id="k9K-4x-UOa"/>
-                                <constraint firstItem="fTx-FM-vA4" firstAttribute="trailing" secondItem="jpV-Cl-dHX" secondAttribute="trailing" id="r5z-H9-whI"/>
                                 <constraint firstItem="UYQ-o4-xcA" firstAttribute="top" secondItem="jpV-Cl-dHX" secondAttribute="bottom" constant="48" id="xuC-z8-m8x"/>
                             </constraints>
                         </view>

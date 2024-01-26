@@ -9,7 +9,7 @@ import Foundation
 
 extension String {
     enum httpHeader {
-        static let accept: String = "Accept"
-        static let authorization: String = "Authorization"
+        static var accept: String { "Accept" }
+        static var authorization: String { "Authorization" }
     }
 }

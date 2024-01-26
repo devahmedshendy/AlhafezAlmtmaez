@@ -8,6 +8,16 @@
 import Foundation
 
 protocol NetworkEndpoint {
-    associatedtype RequestConfiguration: NetworkRequestConfiguration
-    associatedtype DataResponse: NetworkResponse
+    associatedtype Response: NetworkResponse
+    associatedtype Configuration: NetworkRequestConfigurable
+
+    var config: Configuration { get }
+}
+
+protocol GetNetworkEndpoint: NetworkEndpoint where Configuration == GetRequestConfiguration {
+    
+}
+
+protocol PostNetworkEndpoint: NetworkEndpoint where Configuration == PostRequestConfiguration {
+    
 }

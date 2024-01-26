@@ -12,3 +12,9 @@ extension String {
         return NSLocalizedString(self, comment: "")
     }
 }
+
+extension String {
+    func ignoreLocalization() -> String {
+        "\u{202A}" + self + "\u{202C}"
+    }
+}

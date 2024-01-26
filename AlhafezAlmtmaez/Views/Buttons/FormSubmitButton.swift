@@ -75,8 +75,8 @@ final class FormSubmitButton: UIButton {
             ])
         }
 
-        contentHorizontalAlignment = .right
-        semanticContentAttribute = .forceRightToLeft
+//        contentHorizontalAlignment = .right
+//        semanticContentAttribute = .forceRightToLeft
 
         layer.cornerRadius = _cornerRadius
 

@@ -9,6 +9,12 @@ import UIKit
 
 final class SignInScreen: BaseScrollableFormScreen {
 
+    // MARK: - Properties
+
+    private lazy var vm: SignInScreenVM = .init()
+
+    private var phoneNumber: String { phoneNumberFieldView.text }
+
     // MARK: - Constraints
 
     @IBOutlet weak var scrollContentBottomConstraint: NSLayoutConstraint!
@@ -27,6 +33,48 @@ final class SignInScreen: BaseScrollableFormScreen {
 
         setupStrings()
         setupDynamicLayout()
+
+        #if DEBUG
+        phoneNumberFieldView.text = "0780327211"
+        #endif
+    }
+
+    // MARK: - Bindings
+
+    override func setupVMBindingsOnViewDidLoad() {
+        vm.$isLoading
+            .sink { [weak self] isLoading in
+                self?.isLoading = isLoading
+                self?.submitButton.isEnabled = isLoading == false
+            }
+            .store(in: &viewDidLoadBindings)
+
+        vm.$onToastMessage
+            .assign(to: \.onToastMessage, on: self)
+            .store(in: &viewDidLoadBindings)
+
+        vm.$onValidation
+            .sink { [weak self] validation in
+                self?.phoneNumberFieldView.error = validation[.httpBody.phone_number]
+            }
+            .store(in: &viewDidLoadBindings)
+
+        vm.$onRequestResult
+            .sink { [weak self] result in
+                guard let self = self else { return }
+
+                self.goToVerifyCodeScreen(
+                    phoneNumber: phoneNumber,
+                    result: result
+                )
+            }
+            .store(in: &viewDidLoadBindings)
+    }
+
+    // MARK: - Actions
+
+    @IBAction func doSignin(_ sender: UIButton) {
+        vm.doSignIn(phoneNumber: phoneNumber)
     }
 }
 
@@ -34,9 +82,9 @@ final class SignInScreen: BaseScrollableFormScreen {
 
 extension SignInScreen {
     private func setupStrings() {
-        self.navigationItem.title = .text.signin
+        self.navigationItem.title = .text.SignIn
 
-        submitButton.title = .text.signin
+        submitButton.title = .text.SignIn
     }
 
     private func setupDynamicLayout() {

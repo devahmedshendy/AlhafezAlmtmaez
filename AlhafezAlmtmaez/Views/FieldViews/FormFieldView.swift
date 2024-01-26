@@ -25,6 +25,17 @@ class FormFieldView: UIView {
         }
     }
 
+    var error: String? {
+        didSet {
+            guard let error = error else {
+                doClearError()
+                return
+            }
+
+            doSetError(error)
+        }
+    }
+
     // MARK: - Subviews
 
     private(set) lazy var titleLabel: FormFieldTitleLabel = .init()
@@ -77,9 +88,11 @@ class FormFieldView: UIView {
         errorLabel.text = ""
         formField.doClearErrorLayout()
     }
+}
 
-    // MARK: - View Setup
+// MARK: - View Setup
 
+extension FormFieldView {
     private func setupTitleLabel() {
 
         // Constraint Setup

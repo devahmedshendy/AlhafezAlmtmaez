@@ -7,26 +7,31 @@
 
 import Foundation
 
-enum UserDefaultsError: AppError {
-    case EncodingError(_ metadata: ErrorMetadata)
+//extension ApplicationError {
+//    enum UserDefaults: StringIdentifiable {
+//        static func makeEncodingError(
+//            message: String = .error.Serialization,
+//            debugMessage: String
+//        ) -> ApplicationError {
+//            .init(
+//                type: "\(Self.identifier) - EncodingError",
+//                message: message
+//            )
+//        }
+//    }
+//}
 
-    var metadata: ErrorMetadata {
+enum UserDefaultsError: ApplicationError {
+    case EncodingError(_ debugMessage: String)
+
+    var details: ErrorDetails {
         switch self {
-        case .EncodingError(let m): return m
-        }
-    }
-}
-
-extension UserDefaultsError {
-    static func makeEncodingError(
-        message: String = .error.serialization,
-        debugMessage: String
-    ) -> Self {
-        .EncodingError(
-            .init(
+        case .EncodingError(let debugMessage):
+            return .init(
                 type: "\(Self.identifier) - EncodingError",
-                message: message
+                message: message,
+                debugMessage: debugMessage
             )
-        )
+        }
     }
 }

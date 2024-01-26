@@ -11,21 +11,13 @@ class ServerRemoteRepository {
 
     // MARK: - Properties
 
-    private(set) lazy var server: NetworkServer = AlhafezAlmtmaezServerProxy()
+    private lazy var serverProxy: NetworkServer = AlhafezAlmtmaezServerProxy()
 
     // MARK: - Logic
 
-    func request<T: NetworkEndpoint> (endpoint: T) async throws -> T.DataResponse {
-        try await server.request(
-            requestConfig: T.RequestConfiguration.self,
-            responseModel: T.DataResponse.self
-        )
-    }
-
-    func upload<T: NetworkEndpoint>(to endpoint: T) async throws -> T.DataResponse {
-        try await server.upload(
-            requestConfig: T.RequestConfiguration.self,
-            responseModel: T.DataResponse.self
-        )
+    func request<T: NetworkEndpoint> (
+        endpoint: T
+    ) async throws -> T.Response where T.Response: NetworkResponse {
+        try await serverProxy.request(endpoint)
     }
 }

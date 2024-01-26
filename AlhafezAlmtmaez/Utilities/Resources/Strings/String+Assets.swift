@@ -9,19 +9,26 @@ import Foundation
 
 extension String {
     enum text {
-        static var signin: String { "تسجيل الدخول" }
-        static var phoneNumber: String { "رقم الهاتف" }
-        static var verifyCode: String { "رمز التحقق" }
-        static var verifyCodeHeader: String { "الرجاء إدخال رمز التحقق" }
-        static var verifyCodeSentTo: String { "تم إرسال رمز التحقق إلى رقم الهاتف" }
-        static var verify: String { "تحقق" }
-        static var changePhoneNumberQuestion: String { "هل تريد تغير رقم الهاتف؟" }
+        static var SignIn: String { "تسجيل الدخول" }
+        static var PhoneNumber: String { "رقم الهاتف" }
+        static var VerifyCode: String { "رمز التحقق" }
+        static var VerifyCodeHeader: String { "الرجاء إدخال رمز التحقق" }
+        static var VerifyCodeSentTo: String { "تم إرسال رمز التحقق إلى رقم الهاتف" }
+        static var Verify: String { "تحقق" }
+        static var ChangePhoneNumberQuestion: String { "هل تريد تغير رقم الهاتف؟" }
+
+        static var OK: String { "حسنا" }
+        static var Cancel: String { "إلغاء" }
+        
+        static var Alert_ExpiredSessionTitle: String { "انتهت الجلسة" }
+        static var Alert_ExpiredSessionDescription: String { "تم انتهاء الجلسة الحالية، برجاء تسجيل الدخول مرة أخرى" }
     }
 
     enum error {
-        static var unknown: String { "خطأ غير معروف، من فضلك تواصل مع الادمن" }
-        static var appSettings: String { "حدث خطأ فى الإعدادات، يرجى المحاولة مرة اخرى" }
-        static var serialization: String { "حدث خطأ فى معالجة البيانات" }
-        static var unexpectedResponseData: String { "رد غير متوقع من السرفر" }
+        static var Unknown: String { "خطأ غير معروف، من فضلك تواصل مع الادمن" }
+        static var AppSettings: String { "حدث خطأ فى الإعدادات، يرجى المحاولة مرة اخرى" }
+        static var Serialization: String { "حدث خطأ فى معالجة البيانات" }
+        static var MissingResponseData: String { "لم يتم الحصول على اى بيانات من السرفر" }
+        static var FormValidation: String { "يرجى مراجعة الإخطاء وإعداة المحاولة" }
     }
 }

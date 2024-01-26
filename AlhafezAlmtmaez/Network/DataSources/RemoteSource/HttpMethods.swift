@@ -9,7 +9,7 @@ import Foundation
 
 extension String {
     enum httpMethod {
-        static let GET: String = "GET"
-        static let POST: String = "POST"
+        static var GET: String { "GET" }
+        static var POST: String { "POST" }
     }
 }

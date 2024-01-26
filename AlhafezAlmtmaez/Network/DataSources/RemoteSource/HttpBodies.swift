@@ -9,6 +9,6 @@ import Foundation
 
 extension String {
     enum httpBody {
-
+        static var phone_number: String { "phone_number" }
     }
 }

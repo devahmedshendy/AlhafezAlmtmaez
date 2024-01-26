@@ -62,6 +62,7 @@ final class FormOTPStackView: UIStackView, FormFieldEditable {
         axis = .horizontal
         distribution = .fillEqually
         spacing = .dynamicToWidth(11)
+        semanticContentAttribute = .forceLeftToRight
 
         setupFields()
 

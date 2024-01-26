@@ -1,5 +1,5 @@
 //
-//  KeychainDataSource.swift
+//  KeychainStorageP.swift
 //  AlhafezAlmtmaez
 //
 //  Created by Ahmed Shendy on 05/12/2023.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol KeychainDataSource {
+protocol KeychainStorageP {
     static var account: String { get }
 
     func string(forService service: String) throws -> String?
@@ -17,6 +17,6 @@ protocol KeychainDataSource {
     func upset<T>(_ value: T, forService service: String) throws where T: Encodable
 }
 
-extension KeychainDataSource {
+extension KeychainStorageP {
     static var account: String { Bundle.main.bundleIdentifier ?? "com.alhafez-almtmaez.ios" }
 }

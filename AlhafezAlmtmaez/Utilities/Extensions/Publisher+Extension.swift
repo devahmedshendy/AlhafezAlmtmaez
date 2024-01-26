@@ -36,16 +36,20 @@ extension Publisher where Failure == Error {
 
     func sinkOnMain(
         onSuccess: @escaping (_ data: Self.Output) -> Void,
-        onFailure: @escaping (_ error: any AppError) -> Void
+        onFailure: @escaping (_ error: ApplicationError) -> Void
     ) -> AnyCancellable {
         self
             .receiveOnMainLoop()
             .sink(
                 receiveCompletion: { completion in
-                    if case let .failure(error as any AppError) = completion {
+                    if case let .failure(error as ApplicationError) = completion {
                         onFailure(error)
                     } else if case let .failure(error as NSError) = completion {
-                        onFailure(GeneralError.makeUnknown(error.debugDescription))
+                        onFailure(
+                            GeneralError.Unknown(
+                                error.debugDescription
+                            )
+                        )
                     }
                 },
                 receiveValue: onSuccess
@@ -53,7 +57,7 @@ extension Publisher where Failure == Error {
     }
 
     func sinkOnMain(
-        onFailure: @escaping (_ error: any AppError) -> Void
+        onFailure: @escaping (_ error: ApplicationError) -> Void
     ) -> AnyCancellable {
         self.sinkOnMain(
             onSuccess: { _ in },
