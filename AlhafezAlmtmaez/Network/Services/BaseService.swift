@@ -17,6 +17,6 @@ class BaseService: NSObject, BasicServiceFeatures {
     // MARK: - LifeCycle
 
     deinit {
-        print(Self.self)
+        deinitLog(Self.self)
     }
 }

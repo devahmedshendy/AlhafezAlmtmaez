@@ -34,7 +34,7 @@ final class KeychainStorage: KeychainStorageP {
     // MARK: - LifeCycle
 
     deinit {
-        print(Self.self)
+        deinitLog(Self.self)
     }
 
     // MARK: - Logic

@@ -45,7 +45,7 @@ final class AlhafezAlmtmaezServerProxy: NetworkServer {
             )
 
         } catch {
-            print(error)
+            errorLog(error)
             throw error
         }
     }

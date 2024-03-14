@@ -16,12 +16,22 @@ extension String {
         static var VerifyCodeSentTo: String { "تم إرسال رمز التحقق إلى رقم الهاتف" }
         static var Verify: String { "تحقق" }
         static var ChangePhoneNumberQuestion: String { "هل تريد تغير رقم الهاتف؟" }
+        
+        // Tabs
+        static var Home: String { "الرئيسية" }
+        static var Heros: String { "ابطال شاوس" }
+        static var Quran: String { "قرآن" }
+        static var Profile: String { "حسابى" }
+    }
 
+    enum alert {
         static var OK: String { "حسنا" }
         static var Cancel: String { "إلغاء" }
-        
-        static var Alert_ExpiredSessionTitle: String { "انتهت الجلسة" }
-        static var Alert_ExpiredSessionDescription: String { "تم انتهاء الجلسة الحالية، برجاء تسجيل الدخول مرة أخرى" }
+
+        static var ExpiredSessionTitle: String { "انتهت الجلسة" }
+        static var ExpiredSessionDescription: String {
+            "تم انتهاء الجلسة الحالية، برجاء تسجيل الدخول مرة أخرى"
+        }
     }
 
     enum validation {

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class HomeScreen: BaseScreen {
+final class HomeScreen: BaseScreen {
 
     // MARK: - LifeCycle
     

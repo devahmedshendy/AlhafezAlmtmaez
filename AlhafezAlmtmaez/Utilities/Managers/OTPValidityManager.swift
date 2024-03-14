@@ -43,7 +43,7 @@ final class OTPValidityManager {
 
     deinit {
         timer?.invalidate()
-        print(Self.self)
+        deinitLog(Self.self)
     }
 
     // MARK: - Logic

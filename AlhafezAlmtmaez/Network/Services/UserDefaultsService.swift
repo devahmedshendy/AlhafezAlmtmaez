@@ -45,7 +45,7 @@ extension UserDefaults {
             return object
 
         } catch let error as NSError {
-            print(error.debugDescription)
+            errorLog(error.debugDescription)
             return nil
         }
     }
@@ -57,7 +57,7 @@ extension UserDefaults {
             self.synchronize()
 
         } catch let error as NSError {
-            print(error.debugDescription)
+            errorLog(error.debugDescription)
 
             throw Err.EncodingError(
                 error.localizedDescription

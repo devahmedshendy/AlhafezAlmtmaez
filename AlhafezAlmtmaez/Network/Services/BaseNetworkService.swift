@@ -18,7 +18,7 @@ class BaseNetworkService: BaseService,
     // MARK: - LifeCycle
 
     deinit {
-        print(Self.self)
+        deinitLog(Self.self)
     }
 
 }

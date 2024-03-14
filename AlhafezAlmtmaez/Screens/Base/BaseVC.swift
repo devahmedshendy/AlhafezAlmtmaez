@@ -24,7 +24,7 @@ class BaseVC: UIViewController,
         disposeVMBindingsOfViewDidLoad()
         disposeVMBindingsOfViewWillAppear()
 
-        print(Self.self)
+        deinitLog(Self.self)
     }
 
     override func viewDidLoad() {

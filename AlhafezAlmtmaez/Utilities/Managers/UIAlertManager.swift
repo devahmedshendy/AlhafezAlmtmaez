@@ -24,15 +24,15 @@ final class UIAlertManager {
     func showSessionExpiredAlert(onOK: @escaping () -> Void) {
         let actions: [UIAlertAction] = [
             UIAlertAction(
-                title: .text.OK,
+                title: .alert.OK,
                 style: .default,
                 handler: { _ in onOK() }
             )
         ]
 
         showAlert(
-            title: .text.Alert_ExpiredSessionTitle,
-            body: .text.Alert_ExpiredSessionDescription,
+            title: .alert.ExpiredSessionTitle,
+            body: .alert.ExpiredSessionDescription,
             actions: actions
         )
     }
@@ -59,7 +59,7 @@ final class UIAlertManager {
 
         alert.addAction(
             UIAlertAction(
-                title: .text.Cancel,
+                title: .alert.Cancel,
                 style: .cancel,
                 handler: nil
             )

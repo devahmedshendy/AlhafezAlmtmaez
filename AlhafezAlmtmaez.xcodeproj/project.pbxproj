@@ -82,6 +82,16 @@
 		642727BD2B1D5F3B00A69C7E /* NetworkEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642727BC2B1D5F3B00A69C7E /* NetworkEndpoint.swift */; };
 		642727BF2B1D5FA000A69C7E /* UserProfileEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642727BE2B1D5FA000A69C7E /* UserProfileEndpoint.swift */; };
 		6428D2052B5DF4EE00F6C79D /* BaseFormScreenVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6428D2042B5DF4EE00F6C79D /* BaseFormScreenVM.swift */; };
+		6428DC4D2BA3422100B54E35 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6428DC4C2BA3422100B54E35 /* MainTabBarController.swift */; };
+		6428DC4F2BA3426900B54E35 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6428DC4E2BA3426900B54E35 /* Logger.swift */; };
+		6428DC582BA3475600B54E35 /* HomeScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6428DC562BA3475600B54E35 /* HomeScreen.xib */; };
+		6428DC592BA3475600B54E35 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6428DC572BA3475600B54E35 /* HomeScreen.swift */; };
+		6428DC5D2BA3477C00B54E35 /* HerosScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6428DC5B2BA3477C00B54E35 /* HerosScreen.swift */; };
+		6428DC5E2BA3477C00B54E35 /* HerosScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6428DC5C2BA3477C00B54E35 /* HerosScreen.xib */; };
+		6428DC622BA347BE00B54E35 /* ProfileScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6428DC602BA347BE00B54E35 /* ProfileScreen.swift */; };
+		6428DC632BA347BE00B54E35 /* ProfileScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6428DC612BA347BE00B54E35 /* ProfileScreen.xib */; };
+		6428DC672BA347E500B54E35 /* QuranScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6428DC652BA347E500B54E35 /* QuranScreen.swift */; };
+		6428DC682BA347E500B54E35 /* QuranScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6428DC662BA347E500B54E35 /* QuranScreen.xib */; };
 		642CBF002B20AF3A007B3FFA /* VerifyCodeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642CBEFE2B20AF3A007B3FFA /* VerifyCodeScreen.swift */; };
 		642CBF012B20AF3A007B3FFA /* VerifyCodeScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 642CBEFF2B20AF3A007B3FFA /* VerifyCodeScreen.xib */; };
 		642CBF032B20B4D0007B3FFA /* UnderlinedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642CBF022B20B4D0007B3FFA /* UnderlinedButton.swift */; };
@@ -115,8 +125,6 @@
 		64C1822B2B1F201800AE05A7 /* HttpBodies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64C1822A2B1F201800AE05A7 /* HttpBodies.swift */; };
 		64C1822D2B1F203300AE05A7 /* HttpParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64C1822C2B1F203300AE05A7 /* HttpParams.swift */; };
 		64C1822F2B1F20EF00AE05A7 /* StorageKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64C1822E2B1F20EF00AE05A7 /* StorageKey.swift */; };
-		64C182332B1F217100AE05A7 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64C182312B1F217100AE05A7 /* HomeScreen.swift */; };
-		64C182342B1F217100AE05A7 /* HomeScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 64C182322B1F217100AE05A7 /* HomeScreen.xib */; };
 		64CAEA132B2AFC1E007929B7 /* AuthDataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64CAEA122B2AFC1E007929B7 /* AuthDataRepository.swift */; };
 		64CAEA152B2AFC84007929B7 /* ToastManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64CAEA142B2AFC84007929B7 /* ToastManager.swift */; };
 		64CAEA172B2AFCB2007929B7 /* SpinnerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64CAEA162B2AFCB2007929B7 /* SpinnerManager.swift */; };
@@ -206,6 +214,16 @@
 		642727BC2B1D5F3B00A69C7E /* NetworkEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkEndpoint.swift; sourceTree = "<group>"; };
 		642727BE2B1D5FA000A69C7E /* UserProfileEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileEndpoint.swift; sourceTree = "<group>"; };
 		6428D2042B5DF4EE00F6C79D /* BaseFormScreenVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseFormScreenVM.swift; sourceTree = "<group>"; };
+		6428DC4C2BA3422100B54E35 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		6428DC4E2BA3426900B54E35 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		6428DC562BA3475600B54E35 /* HomeScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeScreen.xib; sourceTree = "<group>"; };
+		6428DC572BA3475600B54E35 /* HomeScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
+		6428DC5B2BA3477C00B54E35 /* HerosScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HerosScreen.swift; sourceTree = "<group>"; };
+		6428DC5C2BA3477C00B54E35 /* HerosScreen.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HerosScreen.xib; sourceTree = "<group>"; };
+		6428DC602BA347BE00B54E35 /* ProfileScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileScreen.swift; sourceTree = "<group>"; };
+		6428DC612BA347BE00B54E35 /* ProfileScreen.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileScreen.xib; sourceTree = "<group>"; };
+		6428DC652BA347E500B54E35 /* QuranScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuranScreen.swift; sourceTree = "<group>"; };
+		6428DC662BA347E500B54E35 /* QuranScreen.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuranScreen.xib; sourceTree = "<group>"; };
 		642CBEFE2B20AF3A007B3FFA /* VerifyCodeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyCodeScreen.swift; sourceTree = "<group>"; };
 		642CBEFF2B20AF3A007B3FFA /* VerifyCodeScreen.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VerifyCodeScreen.xib; sourceTree = "<group>"; };
 		642CBF022B20B4D0007B3FFA /* UnderlinedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderlinedButton.swift; sourceTree = "<group>"; };
@@ -239,8 +257,6 @@
 		64C1822A2B1F201800AE05A7 /* HttpBodies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpBodies.swift; sourceTree = "<group>"; };
 		64C1822C2B1F203300AE05A7 /* HttpParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpParams.swift; sourceTree = "<group>"; };
 		64C1822E2B1F20EF00AE05A7 /* StorageKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageKey.swift; sourceTree = "<group>"; };
-		64C182312B1F217100AE05A7 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
-		64C182322B1F217100AE05A7 /* HomeScreen.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeScreen.xib; sourceTree = "<group>"; };
 		64CAEA122B2AFC1E007929B7 /* AuthDataRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthDataRepository.swift; sourceTree = "<group>"; };
 		64CAEA142B2AFC84007929B7 /* ToastManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastManager.swift; sourceTree = "<group>"; };
 		64CAEA162B2AFCB2007929B7 /* SpinnerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinnerManager.swift; sourceTree = "<group>"; };
@@ -532,6 +548,54 @@
 			path = App;
 			sourceTree = "<group>";
 		};
+		6428DC4B2BA3421500B54E35 /* Tabs */ = {
+			isa = PBXGroup;
+			children = (
+				6428DC4C2BA3422100B54E35 /* MainTabBarController.swift */,
+				6428DC552BA3474C00B54E35 /* Home */,
+				6428DC5A2BA3475B00B54E35 /* Heros */,
+				6428DC642BA347D900B54E35 /* Quran */,
+				6428DC5F2BA3479E00B54E35 /* Profile */,
+			);
+			path = Tabs;
+			sourceTree = "<group>";
+		};
+		6428DC552BA3474C00B54E35 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				6428DC562BA3475600B54E35 /* HomeScreen.xib */,
+				6428DC572BA3475600B54E35 /* HomeScreen.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		6428DC5A2BA3475B00B54E35 /* Heros */ = {
+			isa = PBXGroup;
+			children = (
+				6428DC5C2BA3477C00B54E35 /* HerosScreen.xib */,
+				6428DC5B2BA3477C00B54E35 /* HerosScreen.swift */,
+			);
+			path = Heros;
+			sourceTree = "<group>";
+		};
+		6428DC5F2BA3479E00B54E35 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				6428DC612BA347BE00B54E35 /* ProfileScreen.xib */,
+				6428DC602BA347BE00B54E35 /* ProfileScreen.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		6428DC642BA347D900B54E35 /* Quran */ = {
+			isa = PBXGroup;
+			children = (
+				6428DC662BA347E500B54E35 /* QuranScreen.xib */,
+				6428DC652BA347E500B54E35 /* QuranScreen.swift */,
+			);
+			path = Quran;
+			sourceTree = "<group>";
+		};
 		642CBEFD2B20AF1D007B3FFA /* VerifyCode */ = {
 			isa = PBXGroup;
 			children = (
@@ -615,6 +679,7 @@
 				64751F362B02BA1D0013EB9E /* Extensions */,
 				642727692B1C94B000A69C7E /* PropertyWrappers */,
 				640E76A62B184475001CE975 /* Resources */,
+				6428DC4E2BA3426900B54E35 /* Logger.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -639,15 +704,6 @@
 				642CBF0B2B234B6E007B3FFA /* OTPFieldView.swift */,
 			);
 			path = FieldViews;
-			sourceTree = "<group>";
-		};
-		64C182302B1F215900AE05A7 /* Home */ = {
-			isa = PBXGroup;
-			children = (
-				64C182312B1F217100AE05A7 /* HomeScreen.swift */,
-				64C182322B1F217100AE05A7 /* HomeScreen.xib */,
-			);
-			path = Home;
 			sourceTree = "<group>";
 		};
 		64EFAE2C2AFEA88200C34799 = {
@@ -690,7 +746,7 @@
 				64EFAE562AFEAB1100C34799 /* Splash */,
 				64751F262B02B4A50013EB9E /* SignIn */,
 				642CBEFD2B20AF1D007B3FFA /* VerifyCode */,
-				64C182302B1F215900AE05A7 /* Home */,
+				6428DC4B2BA3421500B54E35 /* Tabs */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -782,13 +838,16 @@
 			files = (
 				640E76BE2B184C4B001CE975 /* AvenirArabic-Heavy.otf in Resources */,
 				64EFAE452AFEA88400C34799 /* LaunchScreen.storyboard in Resources */,
+				6428DC582BA3475600B54E35 /* HomeScreen.xib in Resources */,
+				6428DC682BA347E500B54E35 /* QuranScreen.xib in Resources */,
 				64EFAE5A2AFEAB2A00C34799 /* SplashScreen.xib in Resources */,
 				642CBF012B20AF3A007B3FFA /* VerifyCodeScreen.xib in Resources */,
-				64C182342B1F217100AE05A7 /* HomeScreen.xib in Resources */,
 				640E76A92B18448E001CE975 /* AvenirArabic-Medium.otf in Resources */,
 				64EFAE422AFEA88400C34799 /* Assets.xcassets in Resources */,
+				6428DC632BA347BE00B54E35 /* ProfileScreen.xib in Resources */,
 				64751F332B02B6C50013EB9E /* SignInScreen.xib in Resources */,
 				64EFAE4E2AFEAA9200C34799 /* Localizable.xcstrings in Resources */,
+				6428DC5E2BA3477C00B54E35 /* HerosScreen.xib in Resources */,
 				64EFAE402AFEA88200C34799 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -803,6 +862,7 @@
 				640B33472B192D4000BECE0E /* FormFieldBaseLabel.swift in Sources */,
 				642CBF0E2B2382F1007B3FFA /* FormFieldView.swift in Sources */,
 				640E76AD2B184505001CE975 /* UIViewController+Extension.swift in Sources */,
+				6428DC672BA347E500B54E35 /* QuranScreen.swift in Sources */,
 				640B33382B19275100BECE0E /* String+Assets.swift in Sources */,
 				640E76BA2B184AE1001CE975 /* String+Extension.swift in Sources */,
 				642727682B1C947800A69C7E /* BaseVM.swift in Sources */,
@@ -810,6 +870,7 @@
 				642727852B1C9E3800A69C7E /* UserSessionPublishedWrappers.swift in Sources */,
 				642727B42B1D57FF00A69C7E /* InMemoryCacheStorage.swift in Sources */,
 				640AE83F2B266A1E0045F1B9 /* SignInScreenService.swift in Sources */,
+				6428DC4D2BA3422100B54E35 /* MainTabBarController.swift in Sources */,
 				646D22792B64D81000877543 /* UserCredentialsModel.swift in Sources */,
 				642727832B1C9D3900A69C7E /* UserSession.swift in Sources */,
 				640AE83D2B2669D70045F1B9 /* SignInScreenVM.swift in Sources */,
@@ -822,6 +883,7 @@
 				6427275E2B1A22C500A69C7E /* KeyboardObserver.swift in Sources */,
 				6427278C2B1CA13B00A69C7E /* UserProfileVM.swift in Sources */,
 				640E76C32B184E1E001CE975 /* UIImage+Extension.swift in Sources */,
+				6428DC5D2BA3477C00B54E35 /* HerosScreen.swift in Sources */,
 				642727BF2B1D5FA000A69C7E /* UserProfileEndpoint.swift in Sources */,
 				64780B312B63544800C92261 /* ErrorDetails.swift in Sources */,
 				64C182212B1F12D900AE05A7 /* UserDefaultsError.swift in Sources */,
@@ -856,7 +918,6 @@
 				642727802B1C9D1000A69C7E /* UserSessionRepository.swift in Sources */,
 				640B333C2B19287F00BECE0E /* PhoneNumberField.swift in Sources */,
 				64751F2D2B02B4D80013EB9E /* BaseScreen.swift in Sources */,
-				64C182332B1F217100AE05A7 /* HomeScreen.swift in Sources */,
 				640E76AF2B184525001CE975 /* CGFloat+Extension.swift in Sources */,
 				64751F3B2B02BA490013EB9E /* StringIdentifiable.swift in Sources */,
 				6427278E2B1CA1DB00A69C7E /* UserProfileModel.swift in Sources */,
@@ -872,6 +933,7 @@
 				64CAEA172B2AFCB2007929B7 /* SpinnerManager.swift in Sources */,
 				645B959C2B115FBD00142284 /* AnyObjectIdentifiable.swift in Sources */,
 				640E76A32B1842C1001CE975 /* FormTextField.swift in Sources */,
+				6428DC592BA3475600B54E35 /* HomeScreen.swift in Sources */,
 				640B33512B193F6F00BECE0E /* Publisher+Extension.swift in Sources */,
 				642727B02B1CAB8500A69C7E /* ServerError.swift in Sources */,
 				640B333A2B19282200BECE0E /* BaseVC.swift in Sources */,
@@ -887,6 +949,7 @@
 				642CBF0C2B234B6E007B3FFA /* OTPFieldView.swift in Sources */,
 				640B334D2B193F0900BECE0E /* BaseService.swift in Sources */,
 				642727992B1CA73800A69C7E /* AlhafezAlmtmaezServerProxy.swift in Sources */,
+				6428DC622BA347BE00B54E35 /* ProfileScreen.swift in Sources */,
 				6428D2052B5DF4EE00F6C79D /* BaseFormScreenVM.swift in Sources */,
 				64780B332B63572A00C92261 /* BaseFormVM.swift in Sources */,
 				6427276E2B1C94EE00A69C7E /* SplashScreenService.swift in Sources */,
@@ -911,6 +974,7 @@
 				642727A72B1CA9B900A69C7E /* AlhafezAlmtmaezServer.swift in Sources */,
 				64C1821D2B1F114200AE05A7 /* NetworkResponse.swift in Sources */,
 				64C182292B1F1FFF00AE05A7 /* HttpHeaders.swift in Sources */,
+				6428DC4F2BA3426900B54E35 /* Logger.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -46,18 +46,20 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
 
     private func onStartupSession() {
-        print(Self.self, #function)
+        debugLog(Self.self, #function)
     }
 
     private func onActiveSession() {
-        print(Self.self, #function)
-        setRootViewController(to: HomeScreen())
+        debugLog(Self.self, #function)
+        setRootViewController(to: MainTabBarController())
     }
 
     private func onInactiveSession() {
-        print(Self.self, #function)
+        debugLog(Self.self, #function)
         setRootViewController(
-            to: ScreenNavigationController(rootViewController: SignInScreen())
+            to: ScreenNavigationController(
+                rootViewController: SignInScreen()
+            )
         )
     }
 

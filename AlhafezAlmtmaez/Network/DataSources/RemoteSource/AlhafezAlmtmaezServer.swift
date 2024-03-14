@@ -69,7 +69,7 @@ final class AlhafezAlmtmaezServer: NetworkServer {
         response: Response,
         withStatusCode statusCode: Int
     ) throws -> Response {
-        print(response)
+        debugLog(response)
 
         if statusCode == .statusCodes.Unauth­orized {
             throw Err.UnauthorizedAccount(
