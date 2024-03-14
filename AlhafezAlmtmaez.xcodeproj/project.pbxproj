@@ -124,7 +124,6 @@
 		64CAEA1B2B2AFFCE007929B7 /* ViewControllerNavigating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64CAEA1A2B2AFFCE007929B7 /* ViewControllerNavigating.swift */; };
 		64EFAE392AFEA88200C34799 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64EFAE382AFEA88200C34799 /* AppDelegate.swift */; };
 		64EFAE3B2AFEA88200C34799 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64EFAE3A2AFEA88200C34799 /* SceneDelegate.swift */; };
-		64EFAE3D2AFEA88200C34799 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64EFAE3C2AFEA88200C34799 /* ViewController.swift */; };
 		64EFAE402AFEA88200C34799 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64EFAE3E2AFEA88200C34799 /* Main.storyboard */; };
 		64EFAE422AFEA88400C34799 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 64EFAE412AFEA88400C34799 /* Assets.xcassets */; };
 		64EFAE452AFEA88400C34799 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64EFAE432AFEA88400C34799 /* LaunchScreen.storyboard */; };
@@ -250,7 +249,6 @@
 		64EFAE352AFEA88200C34799 /* الحافظ المتميز.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "الحافظ المتميز.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		64EFAE382AFEA88200C34799 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		64EFAE3A2AFEA88200C34799 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		64EFAE3C2AFEA88200C34799 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		64EFAE3F2AFEA88200C34799 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		64EFAE412AFEA88400C34799 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		64EFAE442AFEA88400C34799 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -522,6 +520,18 @@
 			path = Endpoints;
 			sourceTree = "<group>";
 		};
+		6428DC4A2BA3417A00B54E35 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				64EFAE382AFEA88200C34799 /* AppDelegate.swift */,
+				640B33482B193EC900BECE0E /* AppDelegateService.swift */,
+				64EFAE3A2AFEA88200C34799 /* SceneDelegate.swift */,
+				64EFAE3E2AFEA88200C34799 /* Main.storyboard */,
+				64EFAE432AFEA88400C34799 /* LaunchScreen.storyboard */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
 		642CBEFD2B20AF1D007B3FFA /* VerifyCode */ = {
 			isa = PBXGroup;
 			children = (
@@ -661,12 +671,7 @@
 		64EFAE372AFEA88200C34799 /* AlhafezAlmtmaez */ = {
 			isa = PBXGroup;
 			children = (
-				64EFAE382AFEA88200C34799 /* AppDelegate.swift */,
-				640B33482B193EC900BECE0E /* AppDelegateService.swift */,
-				64EFAE3A2AFEA88200C34799 /* SceneDelegate.swift */,
-				64EFAE3C2AFEA88200C34799 /* ViewController.swift */,
-				64EFAE3E2AFEA88200C34799 /* Main.storyboard */,
-				64EFAE432AFEA88400C34799 /* LaunchScreen.storyboard */,
+				6428DC4A2BA3417A00B54E35 /* App */,
 				64EFAE542AFEAB0100C34799 /* Screens */,
 				642727972B1CA72900A69C7E /* Network */,
 				64751F2E2B02B6A10013EB9E /* Views */,
@@ -863,7 +868,6 @@
 				642727602B1A46AA00A69C7E /* PhoneNumberFieldView.swift in Sources */,
 				64CAEA132B2AFC1E007929B7 /* AuthDataRepository.swift in Sources */,
 				646D22772B64D10E00877543 /* VerifyCodeEndpoint+Dto.swift in Sources */,
-				64EFAE3D2AFEA88200C34799 /* ViewController.swift in Sources */,
 				645B959A2B115F1A00142284 /* UIViewNibbable.swift in Sources */,
 				64CAEA172B2AFCB2007929B7 /* SpinnerManager.swift in Sources */,
 				645B959C2B115FBD00142284 /* AnyObjectIdentifiable.swift in Sources */,

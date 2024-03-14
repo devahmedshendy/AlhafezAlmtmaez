@@ -53,7 +53,6 @@ final class AppDelegateService: BaseService {
 
     private func setupRTLAppearance() {
         // Following line cause this warning:
-//        UIView.appearance().semanticContentAttribute = .forceRightToLeft
         /*
          Unable to simultaneously satisfy constraints.
              Probably at least one of the constraints in the following list is one you don't want.
@@ -73,6 +72,8 @@ final class AppDelegateService: BaseService {
          Make a symbolic breakpoint at UIViewAlertForUnsatisfiableConstraints to catch this in the debugger.
          The methods in the UIConstraintBasedLayoutDebugging category on UIView listed in <UIKitCore/UIView.h> may also be helpful.
          */
+//        UIView.appearance().semanticContentAttribute = .forceRightToLeft
+
         UINavigationBar.appearance().semanticContentAttribute = .forceRightToLeft
     }
 
