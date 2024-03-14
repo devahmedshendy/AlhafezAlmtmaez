@@ -55,7 +55,7 @@ final class SignInScreen: BaseScrollableFormScreen {
 
         vm.$onValidation
             .sink { [weak self] validation in
-                self?.phoneNumberFieldView.error = validation[.httpBody.phone_number]
+                self?.phoneNumberFieldView.error = validation[.validation.phoneNumber]
             }
             .store(in: &viewDidLoadBindings)
 

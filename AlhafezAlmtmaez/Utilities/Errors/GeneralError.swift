@@ -7,18 +7,6 @@
 
 import Foundation
 
-//extension ApplicationError {
-//    enum General: StringIdentifiable {
-//        static func makeUnknown(_ debugMessage: String) ->  ApplicationError {
-//            .init(
-//                type: "\(Self.identifier) - Unknown",
-//                message: .error.Unknown,
-//                debugMessage: debugMessage
-//            )
-//        }
-//    }
-//}
-
 enum GeneralError: ApplicationError {
     case Unknown(_ debugMessage: String)
 

@@ -6,3 +6,8 @@
 //
 
 import Foundation
+
+struct VerifyCodeFormDto {
+    let code: String
+    let verifyToken: String
+}

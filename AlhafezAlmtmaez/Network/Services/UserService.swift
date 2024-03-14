@@ -11,22 +11,41 @@ final class UserService: BaseNetworkService {
  
     // MARK: - Properties
 
-    var activeToken: String { localRepository.getToken() }
+    @CachedCurrentUserToken
+    var cachedCurrentUserToken: String
 
     private lazy var localRepository: UserLocalDataRepository = .init()
     private lazy var remoteRepository: UserRemoteDataRepository = .init()
 
+    // MARK: - Token
+
+    func getCurrentUserToken() -> String {
+        localRepository.getCurrentUserToken() ?? ""
+    }
+
+    func storeCurrentUserToken(_ token: String) {
+        localRepository.storeCurrentUserToken(token)
+    }
+
+    func cacheCurrentUserToken(_ token: String) {
+        localRepository.cacheCurrentUserToken(token)
+    }
+
     // MARK: - User Profile
 
     func getCurrentUserProfile() async throws -> UserProfileModel {
-        try await getUserProfile(token: activeToken)
+        try await getUserProfile(token: cachedCurrentUserToken)
     }
 
     private func getUserProfile(token: String) async throws -> UserProfileModel {
         let response = try await remoteRepository.getUserProfile(
-            token: activeToken
+            token: cachedCurrentUserToken
         )
 
         return try unwrap(responseData: response.data)
+    }
+
+    func cacheCurrentUserProfile(_ profile: UserProfileModel) {
+        localRepository.cacheUserProfile(profile)
     }
 }

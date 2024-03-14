@@ -10,6 +10,15 @@ import UIKit
 protocol ViewControllerNavigating: UIViewController { }
 
 extension ViewControllerNavigating {
+    func goBackToSignInScreen() {
+        guard let vc = self.navigationController?.viewControllers.first(where: { $0 is SignInScreen }) else { return }
+
+        self.navigationController?.popToViewController(
+            vc,
+            animated: true
+        )
+    }
+
     func goToVerifyCodeScreen(
         phoneNumber: String,
         result: TokenAndPhoneResponseResult

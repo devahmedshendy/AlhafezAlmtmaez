@@ -6,3 +6,13 @@
 //
 
 import Foundation
+
+struct UserCredentialsModel: Codable {
+    let access_token: String
+    let user: UserProfileModel
+
+    enum CodingKeys: CodingKey {
+        case access_token
+        case user
+    }
+}

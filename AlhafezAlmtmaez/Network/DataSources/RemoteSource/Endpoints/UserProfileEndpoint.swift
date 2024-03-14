@@ -15,6 +15,6 @@ struct UserProfileEndpoint: GetNetworkEndpoint {
     )
 
     init(token: String) {
-        config.httpHeaders[.httpHeader.authorization] = token
+        config.setAuthorizationHeader(with: token)
     }
 }

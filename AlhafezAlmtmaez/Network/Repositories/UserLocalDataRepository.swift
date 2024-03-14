@@ -9,15 +9,35 @@ import Foundation
 
 final class UserLocalDataRepository {
 
+    typealias Key = StorageKey
+
     // MARK: - Properties
 
-    private(set) lazy var cache: InMemoryCacheStorage = .shared
-    private(set) lazy var defaults: UserDefaults = .standard
-    private(set) lazy var keychain: KeychainStorage = .init()
+    private lazy var cache: InMemoryCacheStorage = .shared
+    private lazy var defaults: UserDefaults = .standard
+    private lazy var keychain: KeychainStorage = .init()
 
     // MARK: - Token
 
-    func getToken() -> String {
+    var cachedCurrentUserToken: String {
         cache.getCurrentUserToken() ?? ""
+    }
+
+    func getCurrentUserToken() -> String? {
+        defaults.getString(forKey: Key.token)
+    }
+
+    func storeCurrentUserToken(_ token: String) {
+        defaults.setString(token, forKey: Key.token)
+    }
+
+    func cacheCurrentUserToken(_ token: String) {
+        cache.setCurrentUserToken(token)
+    }
+
+    // MARK: - User Profile
+
+    func cacheUserProfile(_ profile: UserProfileModel) {
+        cache.setCurrentUserProfile(.init(from: profile))
     }
 }

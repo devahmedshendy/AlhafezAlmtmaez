@@ -7,20 +7,6 @@
 
 import Foundation
 
-//extension ApplicationError {
-//    enum UserDefaults: StringIdentifiable {
-//        static func makeEncodingError(
-//            message: String = .error.Serialization,
-//            debugMessage: String
-//        ) -> ApplicationError {
-//            .init(
-//                type: "\(Self.identifier) - EncodingError",
-//                message: message
-//            )
-//        }
-//    }
-//}
-
 enum UserDefaultsError: ApplicationError {
     case EncodingError(_ debugMessage: String)
 

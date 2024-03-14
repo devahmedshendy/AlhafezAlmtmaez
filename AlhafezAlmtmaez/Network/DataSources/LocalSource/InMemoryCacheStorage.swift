@@ -19,7 +19,11 @@ final class InMemoryCacheStorage {
 
     private init() { }
 
+    @PublishedOnMainUnlessNil
     private(set) var currentUserToken: String? = nil
+
+    @PublishedOnMainUnlessNil
+    private(set) var currentUserProfile: UserProfileVM? = nil
 
     // MARK: - Token
 
@@ -42,5 +46,14 @@ final class InMemoryCacheStorage {
         lock.lock()
 
         currentUserToken = nil
+    }
+
+    // MARK: - User Profile
+
+    func setCurrentUserProfile(_ newValue: UserProfileVM) {
+        defer { lock.unlock() }
+        lock.lock()
+
+        currentUserProfile = newValue
     }
 }

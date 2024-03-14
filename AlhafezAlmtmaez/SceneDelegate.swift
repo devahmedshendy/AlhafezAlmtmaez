@@ -26,12 +26,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = scene as? UIWindowScene else { return }
 
         self.setupWindow(from: windowScene)
-        self.setupBindings()
+        self.setupSessionBindings()
     }
 
     // MARK: - Bindings
 
-    private func setupBindings() {
+    private func setupSessionBindings() {
         subscription = sessionService
             .$state
             .sink { [weak self] state in

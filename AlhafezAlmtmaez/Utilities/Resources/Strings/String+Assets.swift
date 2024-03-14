@@ -24,6 +24,11 @@ extension String {
         static var Alert_ExpiredSessionDescription: String { "تم انتهاء الجلسة الحالية، برجاء تسجيل الدخول مرة أخرى" }
     }
 
+    enum validation {
+        static var phoneNumber: String { .httpBody.phone_number }
+        static var verifyCode: String { .httpBody.code }
+    }
+
     enum error {
         static var Unknown: String { "خطأ غير معروف، من فضلك تواصل مع الادمن" }
         static var AppSettings: String { "حدث خطأ فى الإعدادات، يرجى المحاولة مرة اخرى" }

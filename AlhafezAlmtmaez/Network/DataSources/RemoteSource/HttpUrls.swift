@@ -24,6 +24,10 @@ extension String {
         .authUrl + "/verification-code"
     }
 
+    static var verifyCode: String {
+        .authUrl + "/verify"
+    }
+
     // MARK: - Profile
 
     private static var userUrl: String { .apiUrl + "/user" }

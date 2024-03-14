@@ -17,4 +17,12 @@ final class AuthDataRepository: ServerRemoteRepository {
             )
         )
     }
+
+    func submitVerifyCode(
+        dto: VerifyCodeFormDto
+    ) async throws -> VerifyCodeEndpoint.Response {
+        try await request(
+            endpoint: VerifyCodeEndpoint(dto: dto)
+        )
+    }
 }

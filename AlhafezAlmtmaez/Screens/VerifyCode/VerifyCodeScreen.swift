@@ -14,6 +14,8 @@ final class VerifyCodeScreen: BaseScrollableFormScreen {
     var phoneNumber: String!
     var verifyToken: String!
 
+    private lazy var vm: VerifyCodeScreenVM = .init()
+
     private lazy var otpValidityManager: OTPValidityManager = .init()
 
     // MARK: - Constraints
@@ -34,10 +36,11 @@ final class VerifyCodeScreen: BaseScrollableFormScreen {
     @IBOutlet weak var phoneNumberLabel: UILabel!
     @IBOutlet weak var changePhoneNumberQuestionButton: UnderlinedButton!
     @IBOutlet weak var resendStackView: UIStackView!
+    @IBOutlet weak var otpFieldView: OTPFieldView!
     @IBOutlet weak var otpTimeLabel: UILabel!
     @IBOutlet weak var otpQuestionLabel: UILabel!
     @IBOutlet weak var resendButton: UIButton!
-
+    
     @IBOutlet weak var verifyButton: FormSubmitButton!
 
     // MARK: - LifeCycle
@@ -59,14 +62,38 @@ final class VerifyCodeScreen: BaseScrollableFormScreen {
         otpValidityManager.start()
     }
 
+    override func setupVMBindingsOnViewDidLoad() {
+        vm.$isLoading
+            .sink { [weak self] isLoading in
+                self?.isLoading = isLoading
+                self?.verifyButton.isEnabled = isLoading == false
+            }
+            .store(in: &viewDidLoadBindings)
+
+        vm.$onToastMessage
+            .assign(to: \.onToastMessage, on: self)
+            .store(in: &viewDidLoadBindings)
+
+        vm.$onValidation
+            .sink { [weak self] validation in
+                self?.otpFieldView.error = validation[.validation.verifyCode]
+            }
+            .store(in: &viewDidLoadBindings)
+    }
+
     // MARK: - Actions
 
     @IBAction func doChangePhoneNumber(_ sender: UIButton) {
-        
+        goBackToSignInScreen()
     }
     
     @IBAction func doVerify(_ sender: Any) {
-
+        vm.verify(
+            dto: .init(
+                code: otpFieldView.otpCode,
+                verifyToken: verifyToken
+            )
+        )
     }
 
     private func doApplyInitialLayout() {

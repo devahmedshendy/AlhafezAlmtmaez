@@ -22,6 +22,7 @@ class FormFieldView: UIView {
         }
         set {
             titleLabel.text = newValue
+            onTitleUpdated()
         }
     }
 
@@ -35,6 +36,10 @@ class FormFieldView: UIView {
             doSetError(error)
         }
     }
+
+    // MARK: - Constraints
+
+    private var constraintForTitleLabelSpacing: NSLayoutConstraint!
 
     // MARK: - Subviews
 
@@ -76,7 +81,7 @@ class FormFieldView: UIView {
 
     // MARK: - Actions
 
-    func doSetError(_ text: String) {
+    private func doSetError(_ text: String) {
         guard text.isEmpty == false else {
             return doClearError()
         }
@@ -84,9 +89,17 @@ class FormFieldView: UIView {
         formField.doApplyErrorLayout()
     }
 
-    func doClearError() {
+    private func doClearError() {
         errorLabel.text = ""
         formField.doClearErrorLayout()
+    }
+
+    // MARK: - Events
+
+    private func onTitleUpdated() {
+        constraintForTitleLabelSpacing.constant = title.isEmpty
+        ? 0
+        : .dynamicToWidth(-16)
     }
 }
 
@@ -97,6 +110,12 @@ extension FormFieldView {
 
         // Constraint Setup
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
+        
+        constraintForTitleLabelSpacing =
+        titleLabel.bottomAnchor.constraint(
+            equalTo: formField.topAnchor,
+            constant: 0
+        )
 
         NSLayoutConstraint.activate([
             titleLabel.leftAnchor.constraint(
@@ -107,7 +126,8 @@ extension FormFieldView {
             ),
             titleLabel.topAnchor.constraint(
                 equalTo: self.topAnchor
-            )
+            ),
+            constraintForTitleLabelSpacing
         ])
     }
 
@@ -122,10 +142,6 @@ extension FormFieldView {
             ),
             formField.rightAnchor.constraint(
                 equalTo: self.rightAnchor
-            ),
-            formField.topAnchor.constraint(
-                equalTo: titleLabel.bottomAnchor,
-                constant: .dynamicToWidth(16)
             ),
             formField.bottomAnchor.constraint(
                 equalTo: errorLabel.topAnchor

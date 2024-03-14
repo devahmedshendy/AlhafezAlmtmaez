@@ -52,7 +52,27 @@ final class AppDelegateService: BaseService {
     }
 
     private func setupRTLAppearance() {
-        UIView.appearance().semanticContentAttribute = .forceRightToLeft
+        // Following line cause this warning:
+//        UIView.appearance().semanticContentAttribute = .forceRightToLeft
+        /*
+         Unable to simultaneously satisfy constraints.
+             Probably at least one of the constraints in the following list is one you don't want.
+             Try this:
+                 (1) look at each constraint and try to figure out which you don't expect;
+                 (2) find the code that added the unwanted constraint or constraints and fix it.
+         (
+             "<NSLayoutConstraint:0x283fc7200 UIView:0x10354ed10.trailing == _UIBackButtonMaskView:0x10354e770.trailing   (active)>",
+             "<NSLayoutConstraint:0x283fc77a0 'BIB_Leading_Leading' H:|-(12)-[_UIModernBarButton:0x10354d6d0]   (active, names: '|':_UIButtonBarButton:0x10354c470 )>",
+             "<NSLayoutConstraint:0x283fc8190 'Mask_Leading_Leading' H:|-(0)-[_UIBackButtonMaskView:0x10354e770]   (active, names: '|':_UIButtonBarButton:0x10354c470 )>",
+             "<NSLayoutConstraint:0x283fc8320 'MaskEV_Leading_BIB_Trailing' H:[_UIModernBarButton:0x10354d6d0]-(0)-[UIView:0x10354ed10]   (active)>"
+         )
+
+         Will attempt to recover by breaking constraint
+         <NSLayoutConstraint:0x283fc7200 UIView:0x10354ed10.trailing == _UIBackButtonMaskView:0x10354e770.trailing   (active)>
+
+         Make a symbolic breakpoint at UIViewAlertForUnsatisfiableConstraints to catch this in the debugger.
+         The methods in the UIConstraintBasedLayoutDebugging category on UIView listed in <UIKitCore/UIView.h> may also be helpful.
+         */
         UINavigationBar.appearance().semanticContentAttribute = .forceRightToLeft
     }
 
@@ -69,7 +89,6 @@ final class AppDelegateService: BaseService {
 
         let backImage = UIImage(named: "navigate-back-icon")?
             .withTintColor(.navigationTitle)
-
         appearance.setBackIndicatorImage(backImage, transitionMaskImage: backImage)
 
         UINavigationBar.appearance(

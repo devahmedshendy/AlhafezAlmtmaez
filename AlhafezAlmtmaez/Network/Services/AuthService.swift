@@ -33,9 +33,14 @@ final class AuthService: BaseService, NetworkServiceFeatures {
     // MARK: - Logic
 
     func validateCurrentUser() async throws {
-        _ = try await user.getCurrentUserProfile()
+        let token = user.getCurrentUserToken()
+        user.cacheCurrentUserToken(token)
+        let profile = try await user.getCurrentUserProfile()
 
-        session.setActive()
+        activateSession(
+            accessToken: token,
+            profile: profile
+        )
     }
 
     // MARK: - Request Verification Code
@@ -54,5 +59,29 @@ final class AuthService: BaseService, NetworkServiceFeatures {
             verifyToken: data.access_token,
             toast: response.message
         )
+    }
+
+    func submitVerifyCode(
+        dto: VerifyCodeFormDto
+    ) async throws {
+        let response = try await repository.submitVerifyCode(dto: dto)
+
+        let data = try unwrap(responseData: response.data)
+
+        activateSession(
+            accessToken: data.access_token, 
+            profile: data.user
+        )
+    }
+
+    private func activateSession(
+        accessToken: String,
+        profile: UserProfileModel
+    ) {
+        user.storeCurrentUserToken(accessToken)
+        user.cacheCurrentUserToken(accessToken)
+        user.cacheCurrentUserProfile(profile)
+
+        session.setActive()
     }
 }

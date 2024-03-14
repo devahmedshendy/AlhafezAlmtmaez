@@ -10,18 +10,18 @@ import Foundation
 /*
  either this
  {
-   status: Bool
-   message: String
-   data: T?
+ status: Bool
+ message: String
+ data: T?
  }
 
  or this
  {
-   status: Bool
-   message: {
-     String : [String]
-   }
-   data: T?
+ status: Bool
+ message: {
+ String : [String]
+ }
+ data: T?
  }
  */
 
@@ -46,15 +46,7 @@ struct NetworkResponseModel<DataModel: Codable>: NetworkResponse {
             self.validation = [:]
         } else if let validationObj = try? container.decode([String : [String]].self, forKey: .message) {
             self.message = .error.FormValidation
-            self.validation = validationObj.values.count <= 1
-            ? validationObj
-                .mapValues {
-                    $0
-                        .compactMap { "• " + $0 }
-                        .joined(separator: "\n")
-
-                }
-            : validationObj
+            self.validation = validationObj
                 .mapValues {
                     $0
                         .compactMap { "• " + $0 }

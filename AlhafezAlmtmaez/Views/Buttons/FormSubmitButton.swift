@@ -54,7 +54,7 @@ final class FormSubmitButton: UIButton {
         configuration?.baseBackgroundColor = .clear
 
         configuration?.image = .init(
-            systemName: "chevron.backward",
+            systemName: "chevron.forward",
             withConfiguration: UIImage.SymbolConfiguration(
                 pointSize: .dynamicToWidth(11),
                 weight: .heavy
@@ -75,7 +75,7 @@ final class FormSubmitButton: UIButton {
             ])
         }
 
-//        contentHorizontalAlignment = .right
+        contentHorizontalAlignment = .right
 //        semanticContentAttribute = .forceRightToLeft
 
         layer.cornerRadius = _cornerRadius

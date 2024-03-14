@@ -14,6 +14,12 @@ protocol NetworkRequestConfigurable {
     var data: [String : String] { get }
 }
 
+extension NetworkRequestConfigurable {
+    mutating func setAuthorizationHeader(with token: String) {
+        httpHeaders[.httpHeader.authorization] = token
+    }
+}
+
 // MARK: - GET
 
 struct GetRequestConfiguration: NetworkRequestConfigurable {

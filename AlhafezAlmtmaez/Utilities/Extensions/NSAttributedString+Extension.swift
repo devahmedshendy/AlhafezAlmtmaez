@@ -33,7 +33,7 @@ extension NSAttributedString {
 
         if underlineColor != .clear {
             attributes[.underlineColor] = underlineColor
-            attributes[.underlineStyle] = underlineStyle
+            attributes[.underlineStyle] = underlineStyle.rawValue
         }
 
         return attributes
