@@ -31,6 +31,10 @@ final class UserService: BaseNetworkService {
         localRepository.cacheCurrentUserToken(token)
     }
 
+    func removeCurrentUserToken() {
+        localRepository.removeCurrentUserToken()
+    }
+
     // MARK: - User Profile
 
     func getCurrentUserProfile() async throws -> UserProfileModel {
@@ -46,6 +50,10 @@ final class UserService: BaseNetworkService {
     }
 
     func cacheCurrentUserProfile(_ profile: UserProfileModel) {
-        localRepository.cacheUserProfile(profile)
+        localRepository.cacheCurrentUserProfile(profile)
+    }
+
+    func removeCurrentUserProfile() {
+        localRepository.removeCurrentUserProfile()
     }
 }

@@ -30,6 +30,13 @@ final class UserLocalDataRepository {
     func storeCurrentUserToken(_ token: String) {
         defaults.setString(token, forKey: Key.token)
     }
+    
+    func removeCurrentUserToken() {
+        while defaults.getString(forKey: Key.token) != nil {
+            defaults.removeString(forKey: Key.token)
+        }
+        cache.setCurrentUserToken(nil)
+    }
 
     func cacheCurrentUserToken(_ token: String) {
         cache.setCurrentUserToken(token)
@@ -37,7 +44,11 @@ final class UserLocalDataRepository {
 
     // MARK: - User Profile
 
-    func cacheUserProfile(_ profile: UserProfileModel) {
+    func cacheCurrentUserProfile(_ profile: UserProfileModel) {
         cache.setCurrentUserProfile(.init(from: profile))
+    }
+
+    func removeCurrentUserProfile() {
+        cache.setCurrentUserProfile(nil)
     }
 }

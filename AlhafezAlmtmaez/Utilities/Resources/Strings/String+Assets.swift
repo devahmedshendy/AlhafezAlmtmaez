@@ -21,7 +21,8 @@ extension String {
         static var Home: String { "الرئيسية" }
         static var Heros: String { "ابطال شاوس" }
         static var Quran: String { "قرآن" }
-        static var Profile: String { "حسابى" }
+        static var MyAccount: String { "حسابى" }
+        static var PersonalPage: String { "الصفحة الشخصية" }
     }
 
     enum alert {

@@ -28,6 +28,10 @@ extension String {
         .authUrl + "/verify"
     }
 
+    static var logout: String {
+        .authUrl + "/logout"
+    }
+
     // MARK: - Profile
 
     private static var userUrl: String { .apiUrl + "/user" }

@@ -74,6 +74,17 @@ final class AuthService: BaseService, NetworkServiceFeatures {
         )
     }
 
+    // MARK: - Sign Out
+
+    func signout() async throws {
+        let token = user.getCurrentUserToken()
+        _ = try await repository.signout(token: token)
+
+        deactivateSession()
+    }
+
+    // MARK: - Helpers
+
     private func activateSession(
         accessToken: String,
         profile: UserProfileModel
@@ -83,5 +94,12 @@ final class AuthService: BaseService, NetworkServiceFeatures {
         user.cacheCurrentUserProfile(profile)
 
         session.setActive()
+    }
+
+    private func deactivateSession() {
+        user.removeCurrentUserToken()
+        user.removeCurrentUserProfile()
+
+        session.setInactive()
     }
 }

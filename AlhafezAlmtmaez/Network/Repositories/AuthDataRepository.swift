@@ -25,4 +25,12 @@ final class AuthDataRepository: ServerRemoteRepository {
             endpoint: VerifyCodeEndpoint(dto: dto)
         )
     }
+
+    func signout(
+        token: String
+    ) async throws -> SignOutEndpoint.Response {
+        try await request(
+            endpoint: SignOutEndpoint(token: token)
+        )
+    }
 }

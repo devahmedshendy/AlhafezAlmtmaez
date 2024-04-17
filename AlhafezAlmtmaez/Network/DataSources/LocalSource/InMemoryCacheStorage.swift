@@ -34,7 +34,7 @@ final class InMemoryCacheStorage {
         return currentUserToken
     }
 
-    func setCurrentUserToken(_ newValue: String) {
+    func setCurrentUserToken(_ newValue: String?) {
         defer { lock.unlock() }
         lock.lock()
 
@@ -50,7 +50,7 @@ final class InMemoryCacheStorage {
 
     // MARK: - User Profile
 
-    func setCurrentUserProfile(_ newValue: UserProfileVM) {
+    func setCurrentUserProfile(_ newValue: UserProfileVM?) {
         defer { lock.unlock() }
         lock.lock()
 

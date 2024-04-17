@@ -45,22 +45,22 @@ extension MainTabBarController {
 
     private func setupViewControllers() {
         let home = HomeScreen()
-        home.tabBarItem = .init(title: .text.Home, image: .iconTabHome, tag: 0)
+        home.tabBarItem = .init(title: .text.Home, image: .tabHomeIcon, tag: 0)
 
         let heros = HerosScreen()
-        heros.tabBarItem = .init(title: .text.Heros, image: .iconTabHeros, tag: 1)
+        heros.tabBarItem = .init(title: .text.Heros, image: .tabHerosIcon, tag: 1)
 
         let quran = QuranScreen()
-        quran.tabBarItem = .init(title: .text.Quran, image: .iconTabQuran, tag: 2)
-        
-        let profile = ProfileScreen()
-        profile.tabBarItem = .init(title: .text.Profile, image: .iconTabProfile, tag: 3)
+        quran.tabBarItem = .init(title: .text.Quran, image: .tabQuranIcon, tag: 2)
+
+        let myAccount = MyAccountScreen()
+        myAccount.tabBarItem = .init(title: .text.MyAccount, image: .tabMyAccountIcon, tag: 3)
 
         viewControllers = [
             ScreenNavigationController(rootViewController: home),
             ScreenNavigationController(rootViewController: heros),
             ScreenNavigationController(rootViewController: quran),
-            ScreenNavigationController(rootViewController: profile),
+            ScreenNavigationController(rootViewController: myAccount),
         ]
     }
 }
