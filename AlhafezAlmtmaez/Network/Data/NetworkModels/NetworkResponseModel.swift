@@ -25,7 +25,7 @@ import Foundation
  }
  */
 
-struct NetworkResponseModel<DataModel: Codable>: NetworkResponse {
+struct NetworkResponseModel<DataModel: Decodable>: NetworkResponse {
     var status: Bool
     var message: String
     var validation: [String : String]

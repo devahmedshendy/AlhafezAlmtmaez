@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="EvaluationsTableHeaderCell" customModule="AlhafezAlmtmaez" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="50"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="393" height="50"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rqG-Kd-7Uj">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="الملاحظات" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a92-cy-vIT">
+                                <rect key="frame" x="0.0" y="0.0" width="88.333333333333329" height="49"/>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MrI-rV-IMU" userLabel="Divider">
+                                <rect key="frame" x="88.333333333333329" y="0.0" width="1" height="49"/>
+                                <color key="backgroundColor" name="Divider"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="1" id="mTL-XA-dAP"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="الاخلاق" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qaX-tO-ENA">
+                                <rect key="frame" x="89.333333333333314" y="0.0" width="67.666666666666686" height="49"/>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dPt-8F-yIM" userLabel="Divider">
+                                <rect key="frame" x="157" y="0.0" width="1" height="49"/>
+                                <color key="backgroundColor" name="Divider"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="1" id="jZR-yg-Tge"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="الورد" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mrw-wY-uX9">
+                                <rect key="frame" x="158" y="0.0" width="67.333333333333314" height="49"/>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AK0-DO-rIl" userLabel="Divider">
+                                <rect key="frame" x="225.33333333333334" y="0.0" width="1" height="49"/>
+                                <color key="backgroundColor" name="Divider"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="1" id="8Gf-OY-KZT"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="الحفظ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OJG-Zv-dhn">
+                                <rect key="frame" x="226.33333333333334" y="0.0" width="67.333333333333343" height="49"/>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PHI-D3-ojp" userLabel="Divider">
+                                <rect key="frame" x="293.66666666666669" y="0.0" width="1" height="49"/>
+                                <color key="backgroundColor" name="Divider"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="1" id="0BA-68-75G"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" verticalHuggingPriority="251" text="اليوم" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mgz-SO-9eD">
+                                <rect key="frame" x="294.66666666666669" y="0.0" width="98.333333333333314" height="49"/>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="qaX-tO-ENA" firstAttribute="width" secondItem="OJG-Zv-dhn" secondAttribute="width" id="Ph4-uH-Zea"/>
+                            <constraint firstItem="OJG-Zv-dhn" firstAttribute="width" secondItem="Mrw-wY-uX9" secondAttribute="width" id="Tzg-Iq-tvM"/>
+                            <constraint firstItem="mgz-SO-9eD" firstAttribute="width" secondItem="rqG-Kd-7Uj" secondAttribute="width" multiplier="0.25" id="ajL-g5-fIJ"/>
+                            <constraint firstItem="a92-cy-vIT" firstAttribute="width" secondItem="mgz-SO-9eD" secondAttribute="width" multiplier="0.9" id="x6K-Vf-DgS"/>
+                        </constraints>
+                    </stackView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Vx-Yc-JWN" userLabel="Divider">
+                        <rect key="frame" x="0.0" y="49" width="393" height="1"/>
+                        <color key="backgroundColor" name="Divider"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="d0h-vv-62A"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="rqG-Kd-7Uj" secondAttribute="trailing" id="ARq-qj-dah"/>
+                    <constraint firstAttribute="trailing" secondItem="8Vx-Yc-JWN" secondAttribute="trailing" id="Cxz-p0-ehl"/>
+                    <constraint firstItem="rqG-Kd-7Uj" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Xbf-gN-lTa"/>
+                    <constraint firstItem="8Vx-Yc-JWN" firstAttribute="top" secondItem="rqG-Kd-7Uj" secondAttribute="bottom" id="YFc-PR-Qic"/>
+                    <constraint firstAttribute="bottom" secondItem="8Vx-Yc-JWN" secondAttribute="bottom" id="Z29-Sq-CqX"/>
+                    <constraint firstItem="rqG-Kd-7Uj" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="fEN-Lx-5P8"/>
+                    <constraint firstItem="8Vx-Yc-JWN" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="iRv-6K-dJl"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outletCollection property="headerLabels" destination="mgz-SO-9eD" collectionClass="NSMutableArray" id="Og5-rp-kUI"/>
+                <outletCollection property="headerLabels" destination="OJG-Zv-dhn" collectionClass="NSMutableArray" id="hbh-by-2F5"/>
+                <outletCollection property="headerLabels" destination="Mrw-wY-uX9" collectionClass="NSMutableArray" id="GVQ-5p-pwP"/>
+                <outletCollection property="headerLabels" destination="a92-cy-vIT" collectionClass="NSMutableArray" id="jl4-Xz-D67"/>
+                <outletCollection property="headerLabels" destination="qaX-tO-ENA" collectionClass="NSMutableArray" id="QN5-cI-YOP"/>
+            </connections>
+            <point key="canvasLocation" x="-31" y="-11"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <namedColor name="Divider">
+            <color red="0.90588235855102539" green="0.92156863212585449" blue="0.94509804248809814" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

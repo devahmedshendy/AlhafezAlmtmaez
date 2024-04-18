@@ -56,4 +56,17 @@ final class UserService: BaseNetworkService {
     func removeCurrentUserProfile() {
         localRepository.removeCurrentUserProfile()
     }
+
+    // MARK: - Evaluations
+
+    func getEvaluations() async throws -> [EvaluationModel] {
+        let response = try await remoteRepository.getEvaluations(
+            token: cachedCurrentUserToken,
+            date: "10/2023"
+        )
+
+        let data = try unwrap(responseData: response.data)
+
+        return data.evaluations
+    }
 }

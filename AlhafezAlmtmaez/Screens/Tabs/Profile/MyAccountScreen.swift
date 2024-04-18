@@ -58,7 +58,7 @@ final class MyAccountScreen: BaseScreen {
         refreshControl.addTarget(
             self, 
             action: #selector(doRefresh), 
-            for: .touchUpInside
+            for: .valueChanged
         )
 
         signoutStackView.addGestureRecognizer(

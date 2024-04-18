@@ -8,7 +8,7 @@
 import Foundation
 
 protocol NetworkResponse: Decodable {
-    associatedtype DataModel: Codable
+    associatedtype DataModel: Decodable
 
     var status: Bool { get }
     var message: String { get }

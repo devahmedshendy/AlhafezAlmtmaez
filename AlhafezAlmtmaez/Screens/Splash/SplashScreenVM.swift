@@ -15,7 +15,7 @@ final class SplashScreenVM: BaseScreenVM {
 
     // MARK: - Logic
 
-    func onViewDidLoad() {
+    func viewDidLoad() {
         onStartLoading()
 
         service.handleOnStartup(

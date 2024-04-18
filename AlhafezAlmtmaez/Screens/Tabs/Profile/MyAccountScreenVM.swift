@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class MyAccountScreenVM: BaseFormVM {
+final class MyAccountScreenVM: BaseVM {
 
     // MARK: - Properties
 

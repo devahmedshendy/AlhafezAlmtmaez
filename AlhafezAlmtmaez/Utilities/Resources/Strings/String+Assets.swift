@@ -16,9 +16,9 @@ extension String {
         static var VerifyCodeSentTo: String { "تم إرسال رمز التحقق إلى رقم الهاتف" }
         static var Verify: String { "تحقق" }
         static var ChangePhoneNumberQuestion: String { "هل تريد تغير رقم الهاتف؟" }
-        
+
         // Tabs
-        static var Home: String { "الرئيسية" }
+        static var Home: String { "الصفحة الرئيسية" }
         static var Heros: String { "ابطال شاوس" }
         static var Quran: String { "قرآن" }
         static var MyAccount: String { "حسابى" }

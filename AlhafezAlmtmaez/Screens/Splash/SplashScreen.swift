@@ -22,6 +22,6 @@ final class SplashScreen: BaseScreen {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        vm.onViewDidLoad()
+        vm.viewDidLoad()
     }
 }

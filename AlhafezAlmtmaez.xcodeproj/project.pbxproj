@@ -105,6 +105,17 @@
 		642CBF0C2B234B6E007B3FFA /* OTPFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642CBF0B2B234B6E007B3FFA /* OTPFieldView.swift */; };
 		642CBF0E2B2382F1007B3FFA /* FormFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642CBF0D2B2382F1007B3FFA /* FormFieldView.swift */; };
 		644BC9EE2BD058C70010E87F /* SignOutEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 644BC9ED2BD058C70010E87F /* SignOutEndpoint.swift */; };
+		644BC9F02BD07C580010E87F /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 644BC9EF2BD07C580010E87F /* UITableView+Extension.swift */; };
+		644BC9F52BD07CE00010E87F /* EvaluationsTableHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 644BC9F32BD07CDF0010E87F /* EvaluationsTableHeaderCell.swift */; };
+		644BC9F62BD07CE00010E87F /* EvaluationsTableHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 644BC9F42BD07CDF0010E87F /* EvaluationsTableHeaderCell.xib */; };
+		644BC9F92BD07E0A0010E87F /* EvaluationTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 644BC9F72BD07E0A0010E87F /* EvaluationTableCell.swift */; };
+		644BC9FA2BD07E0A0010E87F /* EvaluationTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 644BC9F82BD07E0A0010E87F /* EvaluationTableCell.xib */; };
+		644BC9FC2BD07FC80010E87F /* EvaluationVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 644BC9FB2BD07FC80010E87F /* EvaluationVM.swift */; };
+		644BC9FE2BD0800F0010E87F /* HomeScreenVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 644BC9FD2BD0800F0010E87F /* HomeScreenVM.swift */; };
+		644BCA002BD080220010E87F /* HomeScreenService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 644BC9FF2BD080220010E87F /* HomeScreenService.swift */; };
+		644BCA022BD084270010E87F /* EvaluationsEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 644BCA012BD084270010E87F /* EvaluationsEndpoint.swift */; };
+		644BCA042BD084C50010E87F /* EvaluationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 644BCA032BD084C50010E87F /* EvaluationModel.swift */; };
+		644BCA062BD09F8D0010E87F /* EvaluationsDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 644BCA052BD09F8D0010E87F /* EvaluationsDataModel.swift */; };
 		645B959A2B115F1A00142284 /* UIViewNibbable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 645B95992B115F1A00142284 /* UIViewNibbable.swift */; };
 		645B959C2B115FBD00142284 /* AnyObjectIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 645B959B2B115FBD00142284 /* AnyObjectIdentifiable.swift */; };
 		6465186F2B6217DF00CEEF9E /* NetworkResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6465186E2B6217DF00CEEF9E /* NetworkResponseModel.swift */; };
@@ -242,6 +253,17 @@
 		642CBF0B2B234B6E007B3FFA /* OTPFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPFieldView.swift; sourceTree = "<group>"; };
 		642CBF0D2B2382F1007B3FFA /* FormFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormFieldView.swift; sourceTree = "<group>"; };
 		644BC9ED2BD058C70010E87F /* SignOutEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignOutEndpoint.swift; sourceTree = "<group>"; };
+		644BC9EF2BD07C580010E87F /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
+		644BC9F32BD07CDF0010E87F /* EvaluationsTableHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvaluationsTableHeaderCell.swift; sourceTree = "<group>"; };
+		644BC9F42BD07CDF0010E87F /* EvaluationsTableHeaderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EvaluationsTableHeaderCell.xib; sourceTree = "<group>"; };
+		644BC9F72BD07E0A0010E87F /* EvaluationTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvaluationTableCell.swift; sourceTree = "<group>"; };
+		644BC9F82BD07E0A0010E87F /* EvaluationTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EvaluationTableCell.xib; sourceTree = "<group>"; };
+		644BC9FB2BD07FC80010E87F /* EvaluationVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvaluationVM.swift; sourceTree = "<group>"; };
+		644BC9FD2BD0800F0010E87F /* HomeScreenVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenVM.swift; sourceTree = "<group>"; };
+		644BC9FF2BD080220010E87F /* HomeScreenService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenService.swift; sourceTree = "<group>"; };
+		644BCA012BD084270010E87F /* EvaluationsEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvaluationsEndpoint.swift; sourceTree = "<group>"; };
+		644BCA032BD084C50010E87F /* EvaluationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvaluationModel.swift; sourceTree = "<group>"; };
+		644BCA052BD09F8D0010E87F /* EvaluationsDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvaluationsDataModel.swift; sourceTree = "<group>"; };
 		645B95992B115F1A00142284 /* UIViewNibbable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewNibbable.swift; sourceTree = "<group>"; };
 		645B959B2B115FBD00142284 /* AnyObjectIdentifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyObjectIdentifiable.swift; sourceTree = "<group>"; };
 		6465186E2B6217DF00CEEF9E /* NetworkResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResponseModel.swift; sourceTree = "<group>"; };
@@ -438,6 +460,7 @@
 				6428D2042B5DF4EE00F6C79D /* BaseFormScreenVM.swift */,
 				640AE8442B266C6D0045F1B9 /* TokenAndPhoneVM.swift */,
 				6427278B2B1CA13B00A69C7E /* UserProfileVM.swift */,
+				644BC9FB2BD07FC80010E87F /* EvaluationVM.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -480,6 +503,8 @@
 				640AE8422B266C460045F1B9 /* TokenAndPhoneModel.swift */,
 				646D22782B64D81000877543 /* UserCredentialsModel.swift */,
 				6427278D2B1CA1DB00A69C7E /* UserProfileModel.swift */,
+				644BCA052BD09F8D0010E87F /* EvaluationsDataModel.swift */,
+				644BCA032BD084C50010E87F /* EvaluationModel.swift */,
 			);
 			path = NetworkModels;
 			sourceTree = "<group>";
@@ -544,6 +569,7 @@
 				646D22742B64CCB500877543 /* VerifyCodeEndpoint.swift */,
 				646D22762B64D10E00877543 /* VerifyCodeEndpoint+Dto.swift */,
 				644BC9ED2BD058C70010E87F /* SignOutEndpoint.swift */,
+				644BCA012BD084270010E87F /* EvaluationsEndpoint.swift */,
 			);
 			path = Endpoints;
 			sourceTree = "<group>";
@@ -577,6 +603,8 @@
 			children = (
 				6428DC562BA3475600B54E35 /* HomeScreen.xib */,
 				6428DC572BA3475600B54E35 /* HomeScreen.swift */,
+				644BC9FD2BD0800F0010E87F /* HomeScreenVM.swift */,
+				644BC9FF2BD080220010E87F /* HomeScreenService.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -640,6 +668,17 @@
 			path = Managers;
 			sourceTree = "<group>";
 		};
+		644BC9F22BD07CB80010E87F /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				644BC9F32BD07CDF0010E87F /* EvaluationsTableHeaderCell.swift */,
+				644BC9F42BD07CDF0010E87F /* EvaluationsTableHeaderCell.xib */,
+				644BC9F72BD07E0A0010E87F /* EvaluationTableCell.swift */,
+				644BC9F82BD07E0A0010E87F /* EvaluationTableCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		64751F262B02B4A50013EB9E /* SignIn */ = {
 			isa = PBXGroup;
 			children = (
@@ -671,6 +710,7 @@
 				64B115AF2B2B8AD000908D2F /* FieldViews */,
 				640B333F2B192A8500BECE0E /* Labels */,
 				6428DC6B2BA354FB00B54E35 /* ImageViews */,
+				644BC9F22BD07CB80010E87F /* Cells */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -685,6 +725,7 @@
 				640E76BB2B184B46001CE975 /* UIButton+Extension.swift */,
 				640B33502B193F6F00BECE0E /* Publisher+Extension.swift */,
 				640E76AA2B1844F4001CE975 /* UIApplication+Extension.swift */,
+				644BC9EF2BD07C580010E87F /* UITableView+Extension.swift */,
 				640E76AC2B184505001CE975 /* UIViewController+Extension.swift */,
 				640B33442B192BA800BECE0E /* NSAttributedString+Extension.swift */,
 				640E76B72B184A99001CE975 /* NSDirectionalEdgeInsets+Extension.swift */,
@@ -871,6 +912,8 @@
 				64751F332B02B6C50013EB9E /* SignInScreen.xib in Resources */,
 				64EFAE4E2AFEAA9200C34799 /* Localizable.xcstrings in Resources */,
 				6428DC5E2BA3477C00B54E35 /* HerosScreen.xib in Resources */,
+				644BC9F62BD07CE00010E87F /* EvaluationsTableHeaderCell.xib in Resources */,
+				644BC9FA2BD07E0A0010E87F /* EvaluationTableCell.xib in Resources */,
 				64EFAE402AFEA88200C34799 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -884,6 +927,7 @@
 			files = (
 				640B33472B192D4000BECE0E /* FormFieldBaseLabel.swift in Sources */,
 				642CBF0E2B2382F1007B3FFA /* FormFieldView.swift in Sources */,
+				644BCA042BD084C50010E87F /* EvaluationModel.swift in Sources */,
 				640E76AD2B184505001CE975 /* UIViewController+Extension.swift in Sources */,
 				6428DC672BA347E500B54E35 /* QuranScreen.swift in Sources */,
 				640B33382B19275100BECE0E /* String+Assets.swift in Sources */,
@@ -929,7 +973,9 @@
 				640B33452B192BA800BECE0E /* NSAttributedString+Extension.swift in Sources */,
 				6426A5592B64C4E500B46C0A /* VerifyCodeScreenVM.swift in Sources */,
 				64CAEA1B2B2AFFCE007929B7 /* ViewControllerNavigating.swift in Sources */,
+				644BCA062BD09F8D0010E87F /* EvaluationsDataModel.swift in Sources */,
 				642727962B1CA70800A69C7E /* ServerRemoteRepository.swift in Sources */,
+				644BC9F92BD07E0A0010E87F /* EvaluationTableCell.swift in Sources */,
 				642727B62B1D590700A69C7E /* KeychainStorage.swift in Sources */,
 				644BC9EE2BD058C70010E87F /* SignOutEndpoint.swift in Sources */,
 				64C182232B1F134A00AE05A7 /* KeychainError.swift in Sources */,
@@ -943,6 +989,7 @@
 				642727802B1C9D1000A69C7E /* UserSessionRepository.swift in Sources */,
 				640B333C2B19287F00BECE0E /* PhoneNumberField.swift in Sources */,
 				64751F2D2B02B4D80013EB9E /* BaseScreen.swift in Sources */,
+				644BC9F52BD07CE00010E87F /* EvaluationsTableHeaderCell.swift in Sources */,
 				640E76AF2B184525001CE975 /* CGFloat+Extension.swift in Sources */,
 				64751F3B2B02BA490013EB9E /* StringIdentifiable.swift in Sources */,
 				6427278E2B1CA1DB00A69C7E /* UserProfileModel.swift in Sources */,
@@ -953,6 +1000,7 @@
 				6428DC712BA37B7600B54E35 /* MyAccountScreenService.swift in Sources */,
 				642727712B1C952300A69C7E /* BaseScreenService.swift in Sources */,
 				642727602B1A46AA00A69C7E /* PhoneNumberFieldView.swift in Sources */,
+				644BC9FE2BD0800F0010E87F /* HomeScreenVM.swift in Sources */,
 				64CAEA132B2AFC1E007929B7 /* AuthDataRepository.swift in Sources */,
 				6428DC6A2BA354F700B54E35 /* ProfileImageView.swift in Sources */,
 				646D22772B64D10E00877543 /* VerifyCodeEndpoint+Dto.swift in Sources */,
@@ -978,7 +1026,9 @@
 				642727992B1CA73800A69C7E /* AlhafezAlmtmaezServerProxy.swift in Sources */,
 				6428DC622BA347BE00B54E35 /* MyAccountScreen.swift in Sources */,
 				6428D2052B5DF4EE00F6C79D /* BaseFormScreenVM.swift in Sources */,
+				644BCA022BD084270010E87F /* EvaluationsEndpoint.swift in Sources */,
 				6428DC6D2BA355D300B54E35 /* EditProfileImageButton.swift in Sources */,
+				644BC9F02BD07C580010E87F /* UITableView+Extension.swift in Sources */,
 				64780B332B63572A00C92261 /* BaseFormVM.swift in Sources */,
 				6427276E2B1C94EE00A69C7E /* SplashScreenService.swift in Sources */,
 				640E76AB2B1844F4001CE975 /* UIApplication+Extension.swift in Sources */,
@@ -987,6 +1037,7 @@
 				640B33412B192A9800BECE0E /* FormTextFieldView.swift in Sources */,
 				640AE8432B266C460045F1B9 /* TokenAndPhoneModel.swift in Sources */,
 				64C1822F2B1F20EF00AE05A7 /* StorageKey.swift in Sources */,
+				644BCA002BD080220010E87F /* HomeScreenService.swift in Sources */,
 				6427277B2B1C9C1100A69C7E /* AuthAccessibleService.swift in Sources */,
 				6427277D2B1C9CC600A69C7E /* UserSessionService.swift in Sources */,
 				6427276C2B1C94C400A69C7E /* PublishedWrappers.swift in Sources */,
@@ -996,6 +1047,7 @@
 				646518712B62181600CEEF9E /* NoDataNetworkResponseModel.swift in Sources */,
 				642727922B1CA69C00A69C7E /* UserLocalDataRepository.swift in Sources */,
 				64CAEA152B2AFC84007929B7 /* ToastManager.swift in Sources */,
+				644BC9FC2BD07FC80010E87F /* EvaluationVM.swift in Sources */,
 				646D22752B64CCB500877543 /* VerifyCodeEndpoint.swift in Sources */,
 				642727552B1A045500A69C7E /* CGFloat+Assets.swift in Sources */,
 				642CBF032B20B4D0007B3FFA /* UnderlinedButton.swift in Sources */,

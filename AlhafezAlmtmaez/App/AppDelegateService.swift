@@ -171,7 +171,7 @@ final class AppDelegateService: BaseService {
 //
 extension AppDelegateService: UNUserNotificationCenterDelegate {
     func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification) async -> UNNotificationPresentationOptions {
-        let userInfo = notification.request.content.userInfo
+//        let userInfo = notification.request.content.userInfo
 //
 //        if let messageID = userInfo[gcmMessageIDKey] {
 //            print(messageID)
@@ -184,7 +184,7 @@ extension AppDelegateService: UNUserNotificationCenterDelegate {
         _ center: UNUserNotificationCenter,
         didReceive response: UNNotificationResponse
     ) async {
-        let userInfo = response.notification.request.content.userInfo
+//        let userInfo = response.notification.request.content.userInfo
 
 //        if let messageID = userInfo[gcmMessageIDKey] {
 //            Logger.debug("Message ID: \(messageID)")

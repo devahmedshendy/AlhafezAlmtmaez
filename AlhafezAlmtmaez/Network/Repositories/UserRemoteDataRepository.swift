@@ -19,4 +19,15 @@ final class UserRemoteDataRepository: ServerRemoteRepository {
         )
     }
 
+    func getEvaluations(
+        token: String,
+        date: String
+    ) async throws -> EvaluationsEndpoint.Response {
+        try await request(
+            endpoint: EvaluationsEndpoint(
+                token: token,
+                date: date
+            )
+        )
+    }
 }
