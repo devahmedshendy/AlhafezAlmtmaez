@@ -20,10 +20,11 @@ final class HomeScreenVM: BaseVM {
 
     // MARK: - Logic
 
-    func viewDidLoad() {
+    func getEvaluations(ofMonth month: String) {
         onStartLoading()
 
         service.getCurrentUserEvaluations(
+            ofMonth: month,
             onSuccess: { [weak self] result in
                 self?.data = result
                 self?.onStopLoading()
@@ -32,10 +33,11 @@ final class HomeScreenVM: BaseVM {
         )
     }
 
-    func refreshEvaluations() {
+    func refreshEvaluations(ofMonth month: String) {
         onStartRefreshing()
 
         service.getCurrentUserEvaluations(
+            ofMonth: month,
             onSuccess: { [weak self] result in
                 self?.data = result
                 self?.onStopRefreshing()

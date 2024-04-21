@@ -59,10 +59,10 @@ final class UserService: BaseNetworkService {
 
     // MARK: - Evaluations
 
-    func getEvaluations() async throws -> [EvaluationModel] {
+    func getEvaluations(ofMonth month: String) async throws -> [EvaluationModel] {
         let response = try await remoteRepository.getEvaluations(
             token: cachedCurrentUserToken,
-            date: "10/2023"
+            date: month
         )
 
         let data = try unwrap(responseData: response.data)

@@ -14,9 +14,14 @@ final class HomeScreen: BaseScreen {
     private lazy var vm: HomeScreenVM = .init()
 
     private var data: [EvaluationVM] { vm.data }
+    private lazy var thisMonth: String = Date().yearMonth
 
     // MARK: - Subviews
 
+    @IBOutlet weak var monthButton: UIButton!
+    private lazy var datePicker: YearMonthDatePresenter = .init()
+    @IBOutlet weak var displayEvaluationForMonthLabel: UILabel!
+    @IBOutlet weak var noEvaluationLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
     private lazy var refreshControl: UIRefreshControl = .init()
 
@@ -26,12 +31,14 @@ final class HomeScreen: BaseScreen {
         super.viewDidLoad()
 
         setupStrings()
+        setupDynamicLayout()
 
         setupTableView()
 
         setupActions()
 
-        vm.viewDidLoad()
+        monthButton.configuration?.title = thisMonth
+        vm.getEvaluations(ofMonth: thisMonth)
     }
 
     // MARK: - Bindings
@@ -40,12 +47,17 @@ final class HomeScreen: BaseScreen {
         vm.$isLoading
             .sink { [weak self] isLoading in
                 self?.isLoading = isLoading
+                if isLoading {
+                    self?.noEvaluationLabel.isHidden = true
+                }
             }
             .store(in: &viewDidLoadBindings)
 
         vm.$isRefreshing
             .sink { [weak self] isRefreshing in
-                if isRefreshing == false {
+                if isRefreshing {
+                    self?.noEvaluationLabel.isHidden = true
+                } else {
                     self?.refreshControl.endRefreshing()
                 }
             }
@@ -57,6 +69,7 @@ final class HomeScreen: BaseScreen {
 
         vm.$data
             .sink { [weak self] data in
+                self?.noEvaluationLabel.isHidden = data.isEmpty == false
                 self?.tableView.reloadData()
             }
             .store(in: &viewDidLoadBindings)
@@ -70,10 +83,34 @@ final class HomeScreen: BaseScreen {
             action: #selector(doRefresh),
             for: .valueChanged
         )
+
+        monthButton.addTarget(
+            self,
+            action: #selector(doOpenYearMonthPicker),
+            for: .touchUpInside
+        )
+
+        datePicker.onCancel = { [weak self] in
+            self?.datePicker.doHidePicker()
+            self?.datePicker.removeFromSuperview()
+        }
+        datePicker.onPick = { [weak self] pickedDate, formatted in
+            self?.monthButton.configuration?.title = formatted
+            self?.datePicker.doHidePicker()
+            self?.datePicker.removeFromSuperview()
+            self?.vm.getEvaluations(ofMonth: formatted)
+        }
     }
 
     @objc private func doRefresh() {
-        vm.refreshEvaluations()
+        vm.refreshEvaluations(
+            ofMonth: monthButton.configuration?.title ?? thisMonth
+        )
+    }
+
+    @objc private func doOpenYearMonthPicker() {
+        view.addSubview(datePicker)
+        datePicker.doShowPicker()
     }
 }
 
@@ -119,6 +156,12 @@ extension HomeScreen: UITableViewDataSource {
 extension HomeScreen {
     private func setupStrings() {
         self.navigationItem.title = .text.Home
+    }
+
+    private func setupDynamicLayout() {
+        displayEvaluationForMonthLabel.font = .avenirArabic_800(size: 16)
+        noEvaluationLabel.font = .avenirArabic_500(size: 14)
+        monthButton.titleLabel?.font = .avenirArabic_500(size: 16)
     }
 
     private func setupTableView() {

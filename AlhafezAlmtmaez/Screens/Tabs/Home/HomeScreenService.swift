@@ -16,13 +16,14 @@ final class HomeScreenService: BaseScreenService {
     // MARK: - Logic
 
     func getCurrentUserEvaluations(
+        ofMonth month: String,
         onSuccess: @escaping (_ result: [EvaluationVM]) -> Void,
         onFailure: @escaping (_ error: ApplicationError) -> Void
     ) {
         subscriptions[#function]?.cancel()
 
         subscriptions[#function] = publisher {
-            try await self.user.getEvaluations()
+            try await self.user.getEvaluations(ofMonth: month)
         }
         .map { $0.map(EvaluationVM.init(from:)) }
         .sinkOnMain(
